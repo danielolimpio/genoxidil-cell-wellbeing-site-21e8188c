@@ -4,8 +4,18 @@ import { ChevronRight, Shield, Zap, Heart } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section id="home" className="pt-20 pb-16 bg-muted min-h-screen flex items-center">
-      <div className="container mx-auto px-4">
+    <section 
+      id="home" 
+      className="pt-20 pb-16 bg-muted min-h-screen flex items-center relative"
+      style={{
+        backgroundImage: `url('/lovable-uploads/606227e1-5f47-413a-8760-62590ab49818.png')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}
+    >
+      <div className="absolute inset-0 bg-muted/80"></div>
+      <div className="container mx-auto px-4 relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
             <div className="space-y-4">
