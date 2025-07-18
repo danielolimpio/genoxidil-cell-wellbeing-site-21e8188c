@@ -34,7 +34,7 @@ const FeaturedVideos = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Vídeos em <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">Destaque</span>
+            Vídeos em <span className="text-primary">Destaque</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Aprenda mais sobre a ciência por trás do Genoxidil através dos nossos vídeos educacionais 
@@ -45,21 +45,20 @@ const FeaturedVideos = () => {
         <div className="grid lg:grid-cols-3 gap-8 mb-12">
           {videos.map((video) => (
             <div key={video.id} className="bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow group">
-              <div className="relative bg-gradient-to-br from-blue-100 to-orange-100 h-48 flex items-center justify-center">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-orange-500/20"></div>
+              <div className="relative bg-muted h-48 flex items-center justify-center">
                 <button className="relative z-10 w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-                  <Play className="w-6 h-6 text-blue-600 ml-1" />
+                  <Play className="w-6 h-6 text-primary ml-1" />
                 </button>
                 <div className="absolute top-4 left-4 bg-black/70 text-white px-2 py-1 rounded text-sm">
                   {video.duration}
                 </div>
-                <div className="absolute top-4 right-4 bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-medium">
+                <div className="absolute top-4 right-4 bg-primary text-primary-foreground px-3 py-1 rounded-full text-xs font-medium">
                   {video.category}
                 </div>
               </div>
               
               <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors">
                   {video.title}
                 </h3>
                 <p className="text-gray-600 mb-4 leading-relaxed">
@@ -80,15 +79,15 @@ const FeaturedVideos = () => {
           ))}
         </div>
 
-        <div className="bg-gradient-to-r from-blue-600 to-orange-500 rounded-2xl p-8 text-white text-center">
+        <div className="bg-primary rounded-2xl p-8 text-primary-foreground text-center">
           <div className="max-w-2xl mx-auto">
             <Award className="w-16 h-16 mx-auto mb-4" />
             <h3 className="text-2xl font-bold mb-4">Canal Oficial Genoxidil</h3>
-            <p className="text-blue-100 mb-6">
+            <p className="text-primary-foreground/80 mb-6">
               Inscreva-se no nosso canal para receber conteúdo exclusivo sobre saúde celular, 
               pesquisas científicas e dicas de bem-estar.
             </p>
-            <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+            <button className="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
               Inscrever-se no Canal
             </button>
           </div>
