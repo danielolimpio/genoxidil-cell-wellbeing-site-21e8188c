@@ -40,7 +40,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-6">
             <div className="flex items-center space-x-3">
-              <img src="/genoxidil-logo.png" alt="Genoxidil" className="h-12 w-auto" />
+              <img src="/lovable-uploads/f75280e0-b24e-4a95-be18-a24ef4c360d2.png" alt="Genoxidil" className="h-12 w-auto" />
             </div>
             
             <p className="text-gray-300 leading-relaxed">
