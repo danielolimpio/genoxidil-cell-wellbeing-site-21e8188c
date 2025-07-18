@@ -82,8 +82,8 @@ const BlogSection = () => {
               key={category}
               className={`px-6 py-2 rounded-full font-medium transition-all ${
                 category === 'Todos'
-                  ? 'bg-primary text-primary-foreground'
-                  : 'bg-muted text-muted-foreground hover:bg-primary/10 hover:text-primary'
+                  ? 'bg-accent text-accent-foreground'
+                  : 'bg-muted text-muted-foreground hover:bg-accent/10 hover:text-accent'
               }`}
             >
               {category}
@@ -95,14 +95,14 @@ const BlogSection = () => {
         {blogPosts
           .filter(post => post.featured)
           .map((post) => (
-            <div key={post.id} className="bg-gradient-to-r from-blue-50 to-orange-50 rounded-2xl p-8 mb-12">
+            <div key={post.id} className="bg-gradient-to-r from-accent/10 to-accent/5 rounded-2xl p-8 mb-12">
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div>
                   <div className="flex items-center gap-4 mb-4">
-                    <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                    <span className="bg-accent text-accent-foreground px-3 py-1 rounded-full text-sm font-medium">
                       Destaque
                     </span>
-                    <span className="text-blue-600 font-medium">{post.category}</span>
+                    <span className="text-accent font-medium">{post.category}</span>
                   </div>
                   <h3 className="text-3xl font-bold text-gray-900 mb-4">{post.title}</h3>
                   <p className="text-gray-600 mb-6 leading-relaxed">{post.excerpt}</p>
@@ -122,16 +122,16 @@ const BlogSection = () => {
                       </div>
                     </div>
                   </div>
-                  <button className="bg-gradient-to-r from-blue-600 to-orange-500 text-white px-6 py-3 rounded-lg font-medium hover:from-blue-700 hover:to-orange-600 transition-all flex items-center">
+                  <button className="bg-accent text-accent-foreground px-6 py-3 rounded-lg font-medium hover:bg-accent/90 transition-all flex items-center">
                     Ler Artigo Completo
                     <ArrowRight className="ml-2 w-4 h-4" />
                   </button>
                 </div>
                 <div className="bg-white rounded-2xl p-8 shadow-lg">
-                  <div className="aspect-video bg-gradient-to-br from-blue-100 to-orange-100 rounded-lg flex items-center justify-center">
+                  <div className="aspect-video bg-gradient-to-br from-accent/20 to-accent/10 rounded-lg flex items-center justify-center">
                     <div className="text-center">
-                      <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                        <span className="text-white font-bold text-xl">G</span>
+                      <div className="w-16 h-16 bg-accent rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <span className="text-accent-foreground font-bold text-xl">G</span>
                       </div>
                       <p className="text-gray-600">Artigo em Destaque</p>
                     </div>
@@ -147,17 +147,17 @@ const BlogSection = () => {
             .filter(post => !post.featured)
             .map((post) => (
               <article key={post.id} className="bg-gray-50 rounded-2xl overflow-hidden hover:shadow-lg transition-shadow group">
-                <div className="bg-gradient-to-br from-blue-100 to-orange-100 h-48 flex items-center justify-center">
+                <div className="bg-gradient-to-br from-accent/20 to-accent/10 h-48 flex items-center justify-center">
                   <div className="text-center">
-                    <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-orange-500 rounded-xl flex items-center justify-center mx-auto mb-2">
-                      <span className="text-white font-bold">G</span>
+                    <div className="w-12 h-12 bg-accent rounded-xl flex items-center justify-center mx-auto mb-2">
+                      <span className="text-accent-foreground font-bold">G</span>
                     </div>
-                    <span className="text-blue-600 font-medium text-sm">{post.category}</span>
+                    <span className="text-accent font-medium text-sm">{post.category}</span>
                   </div>
                 </div>
                 
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors line-clamp-2">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-accent transition-colors line-clamp-2">
                     {post.title}
                   </h3>
                   <p className="text-gray-600 mb-4 leading-relaxed text-sm line-clamp-3">
@@ -181,7 +181,7 @@ const BlogSection = () => {
                     </div>
                   </div>
                   
-                  <button className="text-blue-600 font-medium text-sm hover:text-blue-700 transition-colors flex items-center">
+                  <button className="text-accent font-medium text-sm hover:text-accent/80 transition-colors flex items-center">
                     Ler mais
                     <ArrowRight className="ml-1 w-3 h-3" />
                   </button>
@@ -203,7 +203,7 @@ const BlogSection = () => {
               placeholder="Seu melhor e-mail"
               className="flex-1 px-4 py-3 rounded-lg text-foreground placeholder-muted-foreground"
             />
-            <button className="bg-card text-primary px-6 py-3 rounded-lg font-semibold hover:bg-card/90 transition-colors">
+            <button className="bg-accent text-accent-foreground px-6 py-3 rounded-lg font-semibold hover:bg-accent/90 transition-colors">
               Inscrever-se
             </button>
           </div>

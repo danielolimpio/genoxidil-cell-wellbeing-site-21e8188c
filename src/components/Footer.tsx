@@ -1,5 +1,6 @@
 
 import { Facebook, Instagram, Youtube, Twitter, Mail, Phone, MapPin, Shield } from 'lucide-react';
+import genoxidilLogo from '@/assets/genoxidil-logo.png';
 
 const Footer = () => {
   const footerLinks = {
@@ -33,19 +34,14 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-card text-card-foreground">
+    <footer className="bg-gray-800 text-gray-100">
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-16">
         <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8">
           {/* Company Info */}
           <div className="space-y-6">
-            <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-secondary rounded-lg flex items-center justify-center">
-                <span className="text-secondary-foreground font-bold text-lg">G</span>
-              </div>
-              <span className="text-2xl font-bold text-secondary">
-                Genoxidil
-              </span>
+            <div className="flex items-center space-x-3">
+              <img src={genoxidilLogo} alt="Genoxidil" className="h-12 w-auto" />
             </div>
             
             <p className="text-gray-300 leading-relaxed">
@@ -145,7 +141,7 @@ const Footer = () => {
                   placeholder="Seu e-mail"
                   className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded text-white placeholder-gray-400 focus:border-blue-500 focus:outline-none"
                 />
-                <button className="w-full bg-gradient-to-r from-blue-600 to-orange-500 px-4 py-2 rounded font-medium hover:from-blue-700 hover:to-orange-600 transition-all">
+                <button className="w-full bg-accent text-accent-foreground px-4 py-2 rounded font-medium hover:bg-accent/90 transition-all">
                   Inscrever-se
                 </button>
               </div>
