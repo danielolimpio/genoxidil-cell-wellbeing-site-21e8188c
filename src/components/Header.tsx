@@ -2,7 +2,6 @@
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import genoxidilLogo from '@/assets/genoxidil-logo.png';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,7 +20,7 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
-            <img src={genoxidilLogo} alt="Genoxidil" className="h-12 w-auto" />
+            <img src="/genoxidil-logo.png" alt="Genoxidil" className="h-12 w-auto" />
           </div>
 
           {/* Desktop Menu */}

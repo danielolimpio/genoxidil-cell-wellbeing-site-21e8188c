@@ -1,6 +1,5 @@
 
 import { Facebook, Instagram, Youtube, Twitter, Mail, Phone, MapPin, Shield } from 'lucide-react';
-import genoxidilLogo from '@/assets/genoxidil-logo.png';
 
 const Footer = () => {
   const footerLinks = {
@@ -41,7 +40,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-6">
             <div className="flex items-center space-x-3">
-              <img src={genoxidilLogo} alt="Genoxidil" className="h-12 w-auto" />
+              <img src="/genoxidil-logo.png" alt="Genoxidil" className="h-12 w-auto" />
             </div>
             
             <p className="text-gray-300 leading-relaxed">
