@@ -7,10 +7,10 @@ const Contact = () => {
     <section id="contato" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Entre em <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">Contato</span>
+          <h2 className="text-4xl font-bold text-foreground mb-4">
+            Entre em <span className="text-secondary">Contato</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Nossa equipe de especialistas está pronta para esclarecer suas dúvidas sobre o Genoxidil 
             e ajudá-lo a alcançar seus objetivos de saúde e bem-estar.
           </p>
@@ -20,91 +20,91 @@ const Contact = () => {
           {/* Contact Information */}
           <div className="space-y-8">
             <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Fale Conosco</h3>
+              <h3 className="text-2xl font-bold text-foreground mb-6">Fale Conosco</h3>
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Phone className="w-6 h-6 text-blue-600" />
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Phone className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-1">Telefone</h4>
-                    <p className="text-gray-600">0800 123 4567</p>
-                    <p className="text-sm text-gray-500">Ligação gratuita</p>
+                    <h4 className="font-semibold text-foreground mb-1">Telefone</h4>
+                    <p className="text-muted-foreground">0800 123 4567</p>
+                    <p className="text-sm text-muted-foreground/70">Ligação gratuita</p>
                   </div>
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <MessageCircle className="w-6 h-6 text-orange-500" />
+                  <div className="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <MessageCircle className="w-6 h-6 text-secondary" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-1">WhatsApp</h4>
-                    <p className="text-gray-600">(11) 99999-9999</p>
-                    <p className="text-sm text-gray-500">Atendimento via chat</p>
+                    <h4 className="font-semibold text-foreground mb-1">WhatsApp</h4>
+                    <p className="text-muted-foreground">(11) 99999-9999</p>
+                    <p className="text-sm text-muted-foreground/70">Atendimento via chat</p>
                   </div>
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Mail className="w-6 h-6 text-blue-600" />
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Mail className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-1">E-mail</h4>
-                    <p className="text-gray-600">contato@genoxidil.com.br</p>
-                    <p className="text-sm text-gray-500">Resposta em até 24h</p>
+                    <h4 className="font-semibold text-foreground mb-1">E-mail</h4>
+                    <p className="text-muted-foreground">contato@genoxidil.com.br</p>
+                    <p className="text-sm text-muted-foreground/70">Resposta em até 24h</p>
                   </div>
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Clock className="w-6 h-6 text-orange-500" />
+                  <div className="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Clock className="w-6 h-6 text-secondary" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-1">Horário de Atendimento</h4>
-                    <p className="text-gray-600">Segunda a Sexta: 8h às 18h</p>
-                    <p className="text-gray-600">Sábado: 8h às 12h</p>
-                    <p className="text-sm text-gray-500">Exceto feriados</p>
+                    <h4 className="font-semibold text-foreground mb-1">Horário de Atendimento</h4>
+                    <p className="text-muted-foreground">Segunda a Sexta: 8h às 18h</p>
+                    <p className="text-muted-foreground">Sábado: 8h às 12h</p>
+                    <p className="text-sm text-muted-foreground/70">Exceto feriados</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-blue-50 to-orange-50 rounded-2xl p-6">
-              <h4 className="text-xl font-bold text-gray-900 mb-4">Atendimento Especializado</h4>
-              <p className="text-gray-600 mb-4">
+            <div className="bg-accent rounded-2xl p-6">
+              <h4 className="text-xl font-bold text-accent-foreground mb-4">Atendimento Especializado</h4>
+              <p className="text-accent-foreground/80 mb-4">
                 Nossa equipe inclui nutricionistas, farmacêuticos e especialistas em saúde celular 
                 prontos para orientá-lo sobre o uso do Genoxidil.
               </p>
               <div className="flex items-center space-x-4">
-                <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                <span className="text-sm font-medium text-gray-700">Especialistas online agora</span>
+                <div className="w-3 h-3 bg-secondary rounded-full"></div>
+                <span className="text-sm font-medium text-accent-foreground">Especialistas online agora</span>
               </div>
             </div>
           </div>
 
           {/* Contact Form */}
-          <div className="bg-gray-50 rounded-2xl p-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">Envie sua Mensagem</h3>
+          <div className="bg-muted rounded-2xl p-8">
+            <h3 className="text-2xl font-bold text-foreground mb-6">Envie sua Mensagem</h3>
             
             <form className="space-y-6">
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-medium text-foreground mb-2">
                     Nome Completo
                   </label>
                   <input
                     type="text"
-                    className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
                     placeholder="Seu nome"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-medium text-foreground mb-2">
                     E-mail
                   </label>
                   <input
                     type="email"
-                    className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
                     placeholder="seu@email.com"
                   />
                 </div>
@@ -160,7 +160,8 @@ const Contact = () => {
 
               <Button 
                 type="submit" 
-                className="w-full bg-gradient-to-r from-blue-600 to-orange-500 hover:from-blue-700 hover:to-orange-600 text-white py-3 text-lg"
+                variant="secondary"
+                className="w-full py-3 text-lg"
               >
                 <Send className="w-5 h-5 mr-2" />
                 Enviar Mensagem
@@ -171,41 +172,41 @@ const Contact = () => {
 
         {/* Additional Support Options */}
         <div className="mt-16 grid md:grid-cols-3 gap-8">
-          <div className="bg-blue-50 rounded-2xl p-6 text-center">
-            <div className="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
-              <Phone className="w-8 h-8 text-white" />
+          <div className="bg-primary/10 rounded-2xl p-6 text-center">
+            <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <Phone className="w-8 h-8 text-primary-foreground" />
             </div>
-            <h4 className="text-xl font-bold text-gray-900 mb-2">Suporte por Telefone</h4>
-            <p className="text-gray-600 mb-4">
+            <h4 className="text-xl font-bold text-foreground mb-2">Suporte por Telefone</h4>
+            <p className="text-muted-foreground mb-4">
               Fale diretamente com nossos especialistas para esclarecimentos imediatos.
             </p>
-            <Button variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50">
+            <Button variant="outline" className="border-primary text-primary hover:bg-primary/10">
               Ligar Agora
             </Button>
           </div>
 
-          <div className="bg-orange-50 rounded-2xl p-6 text-center">
-            <div className="w-16 h-16 bg-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
-              <MessageCircle className="w-8 h-8 text-white" />
+          <div className="bg-secondary/10 rounded-2xl p-6 text-center">
+            <div className="w-16 h-16 bg-secondary rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <MessageCircle className="w-8 h-8 text-secondary-foreground" />
             </div>
-            <h4 className="text-xl font-bold text-gray-900 mb-2">Chat Online</h4>
-            <p className="text-gray-600 mb-4">
+            <h4 className="text-xl font-bold text-foreground mb-2">Chat Online</h4>
+            <p className="text-muted-foreground mb-4">
               Converse conosco via WhatsApp para respostas rápidas e personalizadas.
             </p>
-            <Button variant="outline" className="border-orange-500 text-orange-500 hover:bg-orange-50">
+            <Button variant="outline" className="border-secondary text-secondary hover:bg-secondary/10">
               Abrir Chat
             </Button>
           </div>
 
-          <div className="bg-blue-50 rounded-2xl p-6 text-center">
-            <div className="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
-              <Mail className="w-8 h-8 text-white" />
+          <div className="bg-accent/10 rounded-2xl p-6 text-center">
+            <div className="w-16 h-16 bg-accent rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <Mail className="w-8 h-8 text-accent-foreground" />
             </div>
-            <h4 className="text-xl font-bold text-gray-900 mb-2">Consultoria Gratuita</h4>
-            <p className="text-gray-600 mb-4">
+            <h4 className="text-xl font-bold text-foreground mb-2">Consultoria Gratuita</h4>
+            <p className="text-muted-foreground mb-4">
               Agende uma consulta gratuita com nossos nutricionistas especializados.
             </p>
-            <Button variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50">
+            <Button variant="outline" className="border-accent text-accent hover:bg-accent/10">
               Agendar
             </Button>
           </div>

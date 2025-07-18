@@ -89,13 +89,13 @@ const FAQ = () => {
   ];
 
   return (
-    <section id="faq" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+    <section id="faq" className="py-20 bg-muted">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Perguntas <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">Frequentes</span>
+          <h2 className="text-4xl font-bold text-foreground mb-4">
+            Perguntas <span className="text-secondary">Frequentes</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Tire todas suas dúvidas sobre o Genoxidil, sua composição, uso e benefícios. 
             Nossa equipe científica preparou as respostas mais completas.
           </p>
@@ -107,10 +107,10 @@ const FAQ = () => {
             return (
               <div key={categoryIndex} className="mb-8">
                 <div className="flex items-center mb-6">
-                  <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-orange-500 rounded-lg flex items-center justify-center mr-4">
-                    <IconComponent className="w-5 h-5 text-white" />
+                  <div className="w-10 h-10 bg-secondary rounded-lg flex items-center justify-center mr-4">
+                    <IconComponent className="w-5 h-5 text-secondary-foreground" />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900">{category.category}</h3>
+                  <h3 className="text-2xl font-bold text-foreground">{category.category}</h3>
                 </div>
 
                 <div className="space-y-4">
@@ -119,23 +119,23 @@ const FAQ = () => {
                     const isOpen = openItems.includes(globalIndex);
 
                     return (
-                      <div key={questionIndex} className="bg-white rounded-lg shadow-md overflow-hidden">
+                      <div key={questionIndex} className="bg-card rounded-lg shadow-md overflow-hidden">
                         <button
-                          className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
+                          className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-muted transition-colors"
                           onClick={() => toggleItem(globalIndex)}
                         >
-                          <span className="font-semibold text-gray-900 pr-4">{item.question}</span>
+                          <span className="font-semibold text-card-foreground pr-4">{item.question}</span>
                           {isOpen ? (
-                            <ChevronUp className="w-5 h-5 text-blue-600 flex-shrink-0" />
+                            <ChevronUp className="w-5 h-5 text-primary flex-shrink-0" />
                           ) : (
-                            <ChevronDown className="w-5 h-5 text-gray-400 flex-shrink-0" />
+                            <ChevronDown className="w-5 h-5 text-muted-foreground flex-shrink-0" />
                           )}
                         </button>
                         
                         {isOpen && (
                           <div className="px-6 pb-4">
-                            <div className="border-t border-gray-100 pt-4">
-                              <p className="text-gray-600 leading-relaxed">{item.answer}</p>
+                            <div className="border-t border-border pt-4">
+                              <p className="text-muted-foreground leading-relaxed">{item.answer}</p>
                             </div>
                           </div>
                         )}
@@ -149,18 +149,18 @@ const FAQ = () => {
         </div>
 
         <div className="mt-16 text-center">
-          <div className="bg-white rounded-2xl p-8 shadow-lg max-w-2xl mx-auto">
-            <HelpCircle className="w-16 h-16 text-blue-600 mx-auto mb-4" />
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Ainda tem dúvidas?</h3>
-            <p className="text-gray-600 mb-6">
+          <div className="bg-card rounded-2xl p-8 shadow-lg max-w-2xl mx-auto">
+            <HelpCircle className="w-16 h-16 text-primary mx-auto mb-4" />
+            <h3 className="text-2xl font-bold text-card-foreground mb-4">Ainda tem dúvidas?</h3>
+            <p className="text-muted-foreground mb-6">
               Nossa equipe de especialistas está pronta para esclarecer todas suas questões 
               sobre o Genoxidil e seus benefícios.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-blue-600 to-orange-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-orange-600 transition-all">
+              <button className="bg-secondary text-secondary-foreground px-6 py-3 rounded-lg font-semibold hover:bg-secondary/90 transition-all">
                 Falar com Especialista
               </button>
-              <button className="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
+              <button className="border border-primary text-primary px-6 py-3 rounded-lg font-semibold hover:bg-primary/10 transition-colors">
                 Enviar Pergunta
               </button>
             </div>

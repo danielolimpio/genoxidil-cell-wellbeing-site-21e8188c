@@ -66,10 +66,10 @@ const BlogSection = () => {
     <section id="blog" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Blog <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">Científico</span>
+          <h2 className="text-4xl font-bold text-foreground mb-4">
+            Blog <span className="text-secondary">Científico</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Artigos científicos e educacionais sobre saúde celular, antioxidantes, 
             e os mais recentes avanços em suplementação nutricional.
           </p>
@@ -82,8 +82,8 @@ const BlogSection = () => {
               key={category}
               className={`px-6 py-2 rounded-full font-medium transition-all ${
                 category === 'Todos'
-                  ? 'bg-blue-600 text-white'
-                  : 'bg-gray-100 text-gray-600 hover:bg-blue-50 hover:text-blue-600'
+                  ? 'bg-primary text-primary-foreground'
+                  : 'bg-muted text-muted-foreground hover:bg-primary/10 hover:text-primary'
               }`}
             >
               {category}
@@ -191,9 +191,9 @@ const BlogSection = () => {
         </div>
 
         {/* Newsletter Subscription */}
-        <div className="bg-gradient-to-r from-blue-600 to-orange-500 rounded-2xl p-8 text-white text-center">
+        <div className="bg-secondary rounded-2xl p-8 text-secondary-foreground text-center">
           <h3 className="text-2xl font-bold mb-4">Mantenha-se Atualizado</h3>
-          <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
+          <p className="text-secondary-foreground/80 mb-6 max-w-2xl mx-auto">
             Receba os últimos artigos sobre saúde celular, pesquisas científicas e 
             dicas de bem-estar diretamente em seu e-mail.
           </p>
@@ -201,9 +201,9 @@ const BlogSection = () => {
             <input
               type="email"
               placeholder="Seu melhor e-mail"
-              className="flex-1 px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500"
+              className="flex-1 px-4 py-3 rounded-lg text-foreground placeholder-muted-foreground"
             />
-            <button className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+            <button className="bg-card text-primary px-6 py-3 rounded-lg font-semibold hover:bg-card/90 transition-colors">
               Inscrever-se
             </button>
           </div>

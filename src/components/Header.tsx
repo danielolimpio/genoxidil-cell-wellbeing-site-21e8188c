@@ -16,14 +16,14 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md shadow-sm z-50 border-b border-blue-100">
+    <header className="fixed top-0 left-0 right-0 bg-background/95 backdrop-blur-md shadow-sm z-50 border-b border-border">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-orange-500 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">G</span>
+            <div className="w-10 h-10 bg-secondary rounded-lg flex items-center justify-center">
+              <span className="text-secondary-foreground font-bold text-lg">G</span>
             </div>
-            <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">
+            <span className="text-2xl font-bold text-secondary">
               Genoxidil
             </span>
           </div>
@@ -34,12 +34,12 @@ const Header = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-gray-700 hover:text-blue-600 transition-colors font-medium"
+                className="text-foreground hover:text-primary transition-colors font-medium"
               >
                 {item.name}
               </a>
             ))}
-            <Button className="bg-gradient-to-r from-blue-600 to-orange-500 hover:from-blue-700 hover:to-orange-600 text-white">
+            <Button variant="secondary">
               Comprar Agora
             </Button>
           </nav>
@@ -55,19 +55,19 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <nav className="md:hidden mt-4 pb-4 border-t border-gray-200">
+          <nav className="md:hidden mt-4 pb-4 border-t border-border">
             <div className="flex flex-col space-y-3 pt-4">
               {menuItems.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-gray-700 hover:text-blue-600 transition-colors font-medium py-2"
+                  className="text-foreground hover:text-primary transition-colors font-medium py-2"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
                 </a>
               ))}
-              <Button className="bg-gradient-to-r from-blue-600 to-orange-500 hover:from-blue-700 hover:to-orange-600 text-white mt-4">
+              <Button variant="secondary" className="mt-4">
                 Comprar Agora
               </Button>
             </div>

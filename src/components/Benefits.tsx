@@ -42,13 +42,13 @@ const Benefits = () => {
   ];
 
   return (
-    <section id="produtos" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+    <section id="produtos" className="py-20 bg-muted">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Benefícios <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">Científicos</span>
+          <h2 className="text-4xl font-bold text-foreground mb-4">
+            Benefícios <span className="text-secondary">Científicos</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Cada benefício do Genoxidil é baseado em pesquisas científicas sobre a ativação da proteína Nrf2 
             e seus efeitos no organismo humano.
           </p>
@@ -57,54 +57,53 @@ const Benefits = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {benefits.map((benefit, index) => {
             const IconComponent = benefit.icon;
-            const colorClass = benefit.color === 'blue' ? 'from-blue-600 to-blue-700' : 'from-orange-500 to-orange-600';
-            const bgClass = benefit.color === 'blue' ? 'bg-blue-50' : 'bg-orange-50';
+            const iconColor = benefit.color === 'blue' ? 'bg-primary' : benefit.color === 'orange' ? 'bg-secondary' : 'bg-accent';
             
             return (
-              <div key={index} className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-                <div className={`w-16 h-16 bg-gradient-to-r ${colorClass} rounded-2xl flex items-center justify-center mb-6`}>
+              <div key={index} className="bg-card p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+                <div className={`w-16 h-16 ${iconColor} rounded-2xl flex items-center justify-center mb-6`}>
                   <IconComponent className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">{benefit.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{benefit.description}</p>
+                <h3 className="text-xl font-bold text-card-foreground mb-4">{benefit.title}</h3>
+                <p className="text-muted-foreground leading-relaxed">{benefit.description}</p>
               </div>
             );
           })}
         </div>
 
-        <div className="bg-white rounded-2xl p-8 shadow-lg">
+        <div className="bg-card rounded-2xl p-8 shadow-lg">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
-              <h3 className="text-3xl font-bold text-gray-900 mb-4">
-                Bem-estar <span className="text-orange-500">Geral</span>
+              <h3 className="text-3xl font-bold text-card-foreground mb-4">
+                Bem-estar <span className="text-secondary">Geral</span>
               </h3>
-              <p className="text-gray-600 mb-6 leading-relaxed">
+              <p className="text-muted-foreground mb-6 leading-relaxed">
                 O Genoxidil contribui para o aumento da energia e vitalidade, promovendo uma sensação 
                 geral de bem-estar através da otimização do funcionamento celular.
               </p>
               <div className="space-y-3">
                 <div className="flex items-center">
-                  <div className="w-3 h-3 bg-blue-600 rounded-full mr-3"></div>
-                  <span className="text-gray-700">Aumento da energia natural</span>
+                  <div className="w-3 h-3 bg-primary rounded-full mr-3"></div>
+                  <span className="text-card-foreground">Aumento da energia natural</span>
                 </div>
                 <div className="flex items-center">
-                  <div className="w-3 h-3 bg-orange-500 rounded-full mr-3"></div>
-                  <span className="text-gray-700">Melhora da vitalidade</span>
+                  <div className="w-3 h-3 bg-secondary rounded-full mr-3"></div>
+                  <span className="text-card-foreground">Melhora da vitalidade</span>
                 </div>
                 <div className="flex items-center">
-                  <div className="w-3 h-3 bg-blue-600 rounded-full mr-3"></div>
-                  <span className="text-gray-700">Sensação de bem-estar</span>
+                  <div className="w-3 h-3 bg-accent rounded-full mr-3"></div>
+                  <span className="text-card-foreground">Sensação de bem-estar</span>
                 </div>
               </div>
             </div>
             
-            <div className="bg-gradient-to-br from-blue-50 to-orange-50 rounded-2xl p-8">
+            <div className="bg-accent rounded-2xl p-8">
               <div className="text-center">
-                <div className="w-20 h-20 bg-gradient-to-r from-blue-600 to-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <Heart className="w-10 h-10 text-white" />
+                <div className="w-20 h-20 bg-secondary rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <Heart className="w-10 h-10 text-secondary-foreground" />
                 </div>
-                <h4 className="text-xl font-bold text-gray-900 mb-2">Saúde Cardiovascular</h4>
-                <p className="text-gray-600">
+                <h4 className="text-xl font-bold text-accent-foreground mb-2">Saúde Cardiovascular</h4>
+                <p className="text-accent-foreground/80">
                   Promove a saúde do coração e da circulação através da proteção antioxidante 
                   e melhora da função endotelial.
                 </p>
