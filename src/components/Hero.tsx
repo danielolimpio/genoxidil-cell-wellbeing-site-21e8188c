@@ -13,13 +13,13 @@ const Hero = () => {
                 <Zap className="w-4 h-4 mr-2" />
                 Tecnologia Nrf2 Avançada
               </div>
-              <h1 className="text-4xl md:text-6xl font-bold text-gray-900 leading-tight">
+              <h1 className="text-4xl md:text-6xl font-bold text-foreground leading-tight">
                 Genoxidil
                 <span className="block text-primary">
                   Suplemento do Futuro
                 </span>
               </h1>
-              <p className="text-xl text-gray-600 leading-relaxed">
+              <p className="text-xl text-muted-foreground leading-relaxed">
                 O primeiro multivitamínico de última geração que ativa a proteína Nrf2, 
                 promovendo saúde celular, desintoxicação e bem-estar através da ciência mais avançada.
               </p>
@@ -27,8 +27,9 @@ const Hero = () => {
 
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
+                variant="secondary"
                 size="lg" 
-                className="bg-primary hover:bg-primary/90 text-primary-foreground text-lg px-8 py-3"
+                className="text-lg px-8 py-3"
               >
                 Comprar Agora
                 <ChevronRight className="ml-2 w-5 h-5" />
@@ -42,7 +43,7 @@ const Hero = () => {
               </Button>
             </div>
 
-            <div className="flex items-center space-x-8 text-sm text-gray-600">
+            <div className="flex items-center space-x-8 text-sm text-muted-foreground">
               <div className="flex items-center">
                 <Shield className="w-5 h-5 text-primary mr-2" />
                 Certificado
@@ -66,8 +67,8 @@ const Hero = () => {
                     <div className="w-24 h-24 mx-auto bg-primary rounded-2xl flex items-center justify-center">
                       <span className="text-primary-foreground font-bold text-3xl">G</span>
                     </div>
-                    <h3 className="text-2xl font-bold text-gray-900">Genoxidil</h3>
-                    <p className="text-gray-600">Ativação Nrf2</p>
+                    <h3 className="text-2xl font-bold text-card-foreground">Genoxidil</h3>
+                    <p className="text-muted-foreground">Ativação Nrf2</p>
                     <div className="bg-accent/10 text-accent px-4 py-2 rounded-full text-sm font-medium">
                       Disponível
                     </div>
