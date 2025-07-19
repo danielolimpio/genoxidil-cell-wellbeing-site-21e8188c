@@ -69,21 +69,15 @@ const Hero = () => {
           </div>
 
           <div className="relative">
-            <div className="bg-muted rounded-3xl p-8 relative overflow-hidden">
-              <div className="relative z-10">
-                <div className="w-80 h-80 mx-auto bg-card rounded-2xl shadow-2xl flex items-center justify-center">
-                  <div className="text-center space-y-4">
-                    <div className="w-24 h-24 mx-auto bg-primary rounded-2xl flex items-center justify-center">
-                      <span className="text-primary-foreground font-bold text-3xl">G</span>
-                    </div>
-                    <h3 className="text-2xl font-bold text-card-foreground">Genoxidil</h3>
-                    <p className="text-muted-foreground">Ativação Nrf2</p>
-                    <div className="bg-accent/10 text-accent px-4 py-2 rounded-full text-sm font-medium">
-                      Disponível
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div className="bg-muted/20 rounded-3xl p-8 relative overflow-hidden backdrop-blur-sm">
+              <iframe
+                className="w-full h-80 rounded-2xl shadow-2xl"
+                src="https://www.youtube.com/embed/d19u7mqMG9g"
+                title="Genoxidil Video"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
             </div>
           </div>
         </div>
