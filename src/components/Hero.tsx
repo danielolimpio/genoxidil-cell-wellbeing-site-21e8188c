@@ -69,14 +69,15 @@ const Hero = () => {
           </div>
 
           <div className="relative">
-            <div className="bg-muted/20 rounded-3xl p-8 relative overflow-hidden backdrop-blur-sm">
+            <div className="bg-muted/20 rounded-3xl p-6 relative overflow-hidden backdrop-blur-sm">
               <iframe
-                className="w-full h-80 rounded-2xl shadow-2xl"
+                className="w-full h-96 rounded-2xl shadow-2xl"
                 src="https://www.youtube.com/embed/d19u7mqMG9g"
                 title="Genoxidil Video"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
+                style={{ aspectRatio: '16/9' }}
               ></iframe>
             </div>
           </div>
