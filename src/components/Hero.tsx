@@ -69,16 +69,18 @@ const Hero = () => {
           </div>
 
           <div className="relative">
-            <div className="bg-gradient-to-br from-primary/5 to-accent/5 rounded-3xl p-6 relative overflow-hidden backdrop-blur-sm border border-primary/20 shadow-xl">
-              <div className="relative aspect-video w-full rounded-2xl overflow-hidden border-2 border-gradient-to-r from-primary/30 to-accent/30 shadow-2xl">
+            <div className="bg-gradient-to-br from-primary/10 to-accent/10 rounded-3xl p-6 relative overflow-hidden backdrop-blur-sm border border-primary/20 shadow-xl">
+              <div className="relative aspect-video w-full rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-r from-primary/20 via-background to-accent/20">
                 <iframe
-                  className="absolute inset-0 w-full h-full"
+                  className="absolute inset-0 w-full h-full rounded-2xl"
                   src="https://www.youtube.com/embed/d19u7mqMG9g"
                   title="Genoxidil Video"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                 ></iframe>
+                {/* Overlay gradient to blend with background */}
+                <div className="absolute inset-0 pointer-events-none rounded-2xl bg-gradient-to-r from-primary/5 via-transparent to-accent/5"></div>
               </div>
             </div>
           </div>
