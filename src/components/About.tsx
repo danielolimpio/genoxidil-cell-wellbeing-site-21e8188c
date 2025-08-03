@@ -1,5 +1,5 @@
 
-import { Microscope, Dna, Shield, Zap, Battery, Heart, Smile } from 'lucide-react';
+import { Microscope, Dna, Shield, Zap } from 'lucide-react';
 
 const About = () => {
   return (
@@ -40,54 +40,44 @@ const About = () => {
             </div>
           </div>
 
-          <div className="bg-primary rounded-2xl p-8">
-            <div className="space-y-6">
-              <h4 className="text-2xl font-bold text-primary-foreground text-center">Como Funciona</h4>
-              
-              <div className="space-y-4">
-                <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-secondary text-secondary-foreground rounded-full flex items-center justify-center text-sm font-bold">1</div>
-                  <div>
-                    <h5 className="font-semibold text-primary-foreground">Ativação</h5>
-                    <p className="text-sm text-primary-foreground/80">Fitonutrientes ativam a proteína Nrf2</p>
-                  </div>
-                </div>
+          <div className="bg-primary rounded-2xl p-8 relative overflow-hidden">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              <div className="space-y-6">
+                <h4 className="text-2xl font-bold text-primary-foreground">Como Funciona</h4>
                 
-                <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-accent text-accent-foreground rounded-full flex items-center justify-center text-sm font-bold">2</div>
-                  <div>
-                    <h5 className="font-semibold text-primary-foreground">Produção</h5>
-                    <p className="text-sm text-primary-foreground/80">Aumento de enzimas antioxidantes</p>
+                <div className="space-y-4">
+                  <div className="flex items-start space-x-4">
+                    <div className="w-8 h-8 bg-secondary text-secondary-foreground rounded-full flex items-center justify-center text-sm font-bold">1</div>
+                    <div>
+                      <h5 className="font-semibold text-primary-foreground">Ativação</h5>
+                      <p className="text-sm text-primary-foreground/80">Fitonutrientes ativam a proteína Nrf2</p>
+                    </div>
                   </div>
-                </div>
-                
-                <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-secondary text-secondary-foreground rounded-full flex items-center justify-center text-sm font-bold">3</div>
-                  <div>
-                    <h5 className="font-semibold text-primary-foreground">Proteção</h5>
-                    <p className="text-sm text-primary-foreground/80">Defesa celular contra radicais livres</p>
+                  
+                  <div className="flex items-start space-x-4">
+                    <div className="w-8 h-8 bg-accent text-accent-foreground rounded-full flex items-center justify-center text-sm font-bold">2</div>
+                    <div>
+                      <h5 className="font-semibold text-primary-foreground">Produção</h5>
+                      <p className="text-sm text-primary-foreground/80">Aumento de enzimas antioxidantes</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-4">
+                    <div className="w-8 h-8 bg-secondary text-secondary-foreground rounded-full flex items-center justify-center text-sm font-bold">3</div>
+                    <div>
+                      <h5 className="font-semibold text-primary-foreground">Proteção</h5>
+                      <p className="text-sm text-primary-foreground/80">Defesa celular contra radicais livres</p>
+                    </div>
                   </div>
                 </div>
               </div>
 
-              <div className="mt-8 pt-6 border-t border-primary-foreground/20">
-                <h5 className="text-lg font-semibold text-primary-foreground mb-4 text-center">Benefícios</h5>
-                <div className="space-y-3">
-                  <div className="flex items-center space-x-3">
-                    <Battery className="w-6 h-6 text-secondary" />
-                    <span className="text-primary-foreground font-medium">Aumento da energia natural</span>
-                  </div>
-                  
-                  <div className="flex items-center space-x-3">
-                    <Heart className="w-6 h-6 text-accent" />
-                    <span className="text-primary-foreground font-medium">Melhora da vitalidade</span>
-                  </div>
-                  
-                  <div className="flex items-center space-x-3">
-                    <Smile className="w-6 h-6 text-secondary" />
-                    <span className="text-primary-foreground font-medium">Sensação de bem-estar</span>
-                  </div>
-                </div>
+              <div className="flex justify-center lg:justify-end">
+                <img 
+                  src="/lovable-uploads/47d1c536-59d7-41a7-bfd4-6f6d5b9d33b3.png" 
+                  alt="Genoxidil Suplemento" 
+                  className="w-64 h-64 object-contain"
+                />
               </div>
             </div>
           </div>

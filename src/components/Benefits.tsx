@@ -1,5 +1,5 @@
 
-import { Heart, Brain, Shield, Sparkles, Zap, Users } from 'lucide-react';
+import { Heart, Brain, Shield, Sparkles, Zap, Users, Battery, Smile } from 'lucide-react';
 
 const Benefits = () => {
   const benefits = [
@@ -81,18 +81,18 @@ const Benefits = () => {
                 O Genoxidil contribui para o aumento da energia e vitalidade, promovendo uma sensação 
                 geral de bem-estar através da otimização do funcionamento celular.
               </p>
-              <div className="space-y-3">
-                <div className="flex items-center">
-                  <div className="w-3 h-3 bg-primary rounded-full mr-3"></div>
-                  <span className="text-card-foreground">Aumento da energia natural</span>
+              <div className="space-y-4">
+                <div className="flex items-center space-x-3">
+                  <Battery className="w-6 h-6 text-primary" />
+                  <span className="text-card-foreground font-medium">Aumento da energia natural</span>
                 </div>
-                <div className="flex items-center">
-                  <div className="w-3 h-3 bg-secondary rounded-full mr-3"></div>
-                  <span className="text-card-foreground">Melhora da vitalidade</span>
+                <div className="flex items-center space-x-3">
+                  <Heart className="w-6 h-6 text-secondary" />
+                  <span className="text-card-foreground font-medium">Melhora da vitalidade</span>
                 </div>
-                <div className="flex items-center">
-                  <div className="w-3 h-3 bg-accent rounded-full mr-3"></div>
-                  <span className="text-card-foreground">Sensação de bem-estar</span>
+                <div className="flex items-center space-x-3">
+                  <Smile className="w-6 h-6 text-accent" />
+                  <span className="text-card-foreground font-medium">Sensação de bem-estar</span>
                 </div>
               </div>
             </div>
