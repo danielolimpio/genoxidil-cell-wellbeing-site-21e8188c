@@ -79,11 +79,20 @@ const FeaturedVideos = () => {
           ))}
         </div>
 
-        <div className="bg-primary rounded-2xl p-8 text-primary-foreground text-center">
-          <div className="max-w-2xl mx-auto">
-            <Award className="w-16 h-16 mx-auto mb-4" />
-            <h3 className="text-2xl font-bold mb-4">Canal Oficial Genoxidil</h3>
-            <p className="text-primary-foreground/80 mb-6">
+        <div 
+          className="rounded-2xl p-8 text-center relative"
+          style={{
+            backgroundImage: 'url(/lovable-uploads/ff4de8e8-6c25-43d9-8be1-c65e1bc68040.png)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat'
+          }}
+        >
+          <div className="absolute inset-0 bg-black/60 rounded-2xl"></div>
+          <div className="relative z-10 max-w-2xl mx-auto">
+            <Award className="w-16 h-16 mx-auto mb-4 text-white" />
+            <h3 className="text-2xl font-bold mb-4 text-white">Canal Oficial Genoxidil</h3>
+            <p className="text-white/90 mb-6">
               Inscreva-se no nosso canal para receber conteúdo exclusivo sobre saúde celular, 
               pesquisas científicas e dicas de bem-estar.
             </p>
