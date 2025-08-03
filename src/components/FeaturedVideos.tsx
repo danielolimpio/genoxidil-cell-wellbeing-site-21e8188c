@@ -9,7 +9,8 @@ const FeaturedVideos = () => {
       description: 'Entenda como funciona o mecanismo de ativação da proteína Nrf2 e seus benefícios para a saúde celular.',
       duration: '12:34',
       views: '125K',
-      category: 'Ciência'
+      category: 'Ciência',
+      videoUrl: 'https://www.youtube.com/watch?v=Siiyj7dioFg'
     },
     {
       id: 2,
@@ -46,7 +47,10 @@ const FeaturedVideos = () => {
           {videos.map((video) => (
             <div key={video.id} className="bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow group">
               <div className="relative bg-muted h-48 flex items-center justify-center">
-                <button className="relative z-10 w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                <button 
+                  className="relative z-10 w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform"
+                  onClick={() => video.videoUrl && window.open(video.videoUrl, '_blank')}
+                >
                   <Play className="w-6 h-6 text-primary ml-1" />
                 </button>
                 <div className="absolute top-4 left-4 bg-black/70 text-white px-2 py-1 rounded text-sm">
