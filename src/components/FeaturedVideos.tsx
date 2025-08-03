@@ -6,7 +6,7 @@ const FeaturedVideos = () => {
   const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
 
   const getYouTubeVideoId = (url: string) => {
-    const regex = /(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&\n?#]+)/;
+    const regex = /(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([^&\n?#]+)/;
     const match = url.match(regex);
     return match ? match[1] : null;
   };
