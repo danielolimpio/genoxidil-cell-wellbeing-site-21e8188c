@@ -1,5 +1,5 @@
 
-import { Microscope, Dna, Shield, Zap } from 'lucide-react';
+import { Microscope, Dna, Shield, Zap, Battery, Heart, Smile } from 'lucide-react';
 
 const About = () => {
   return (
@@ -66,6 +66,26 @@ const About = () => {
                   <div>
                     <h5 className="font-semibold text-primary-foreground">Proteção</h5>
                     <p className="text-sm text-primary-foreground/80">Defesa celular contra radicais livres</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-8 pt-6 border-t border-primary-foreground/20">
+                <h5 className="text-lg font-semibold text-primary-foreground mb-4 text-center">Benefícios</h5>
+                <div className="space-y-3">
+                  <div className="flex items-center space-x-3">
+                    <Battery className="w-6 h-6 text-secondary" />
+                    <span className="text-primary-foreground font-medium">Aumento da energia natural</span>
+                  </div>
+                  
+                  <div className="flex items-center space-x-3">
+                    <Heart className="w-6 h-6 text-accent" />
+                    <span className="text-primary-foreground font-medium">Melhora da vitalidade</span>
+                  </div>
+                  
+                  <div className="flex items-center space-x-3">
+                    <Smile className="w-6 h-6 text-secondary" />
+                    <span className="text-primary-foreground font-medium">Sensação de bem-estar</span>
                   </div>
                 </div>
               </div>
