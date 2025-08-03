@@ -83,25 +83,36 @@ const About = () => {
           </div>
         </div>
 
-        <div className="bg-muted rounded-2xl p-8">
-          <h4 className="text-2xl font-bold text-foreground mb-6 text-center">Composição Científica</h4>
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-card p-6 rounded-lg">
-              <Shield className="w-10 h-10 text-primary mb-4" />
-              <h5 className="font-semibold text-card-foreground mb-2">Antioxidantes Naturais</h5>
-              <p className="text-sm text-muted-foreground">Espirulina, Astaxantina, Licopeno, Trans-resveratrol</p>
-            </div>
-            
-            <div className="bg-card p-6 rounded-lg">
-              <Zap className="w-10 h-10 text-secondary mb-4" />
-              <h5 className="font-semibold text-card-foreground mb-2">Complexo Vitamínico</h5>
-              <p className="text-sm text-muted-foreground">Vitaminas A, C, E, Complexo B, K1</p>
-            </div>
-            
-            <div className="bg-card p-6 rounded-lg">
-              <Microscope className="w-10 h-10 text-accent mb-4" />
-              <h5 className="font-semibold text-card-foreground mb-2">Estabilizantes</h5>
-              <p className="text-sm text-muted-foreground">Celulose microcristalina, Fosfato tricálcico</p>
+        <div 
+          className="rounded-2xl p-8 relative"
+          style={{
+            backgroundImage: 'url(/lovable-uploads/3f615c26-5bd4-4225-a435-ac81be8d749b.png)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat'
+          }}
+        >
+          <div className="absolute inset-0 bg-black/50 rounded-2xl"></div>
+          <div className="relative z-10">
+            <h4 className="text-2xl font-bold text-white mb-6 text-center">Composição Científica</h4>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="bg-card p-6 rounded-lg">
+                <Shield className="w-10 h-10 text-primary mb-4" />
+                <h5 className="font-semibold text-card-foreground mb-2">Antioxidantes Naturais</h5>
+                <p className="text-sm text-muted-foreground">Espirulina, Astaxantina, Licopeno, Trans-resveratrol</p>
+              </div>
+              
+              <div className="bg-card p-6 rounded-lg">
+                <Zap className="w-10 h-10 text-secondary mb-4" />
+                <h5 className="font-semibold text-card-foreground mb-2">Complexo Vitamínico</h5>
+                <p className="text-sm text-muted-foreground">Vitaminas A, C, E, Complexo B, K1</p>
+              </div>
+              
+              <div className="bg-card p-6 rounded-lg">
+                <Microscope className="w-10 h-10 text-accent mb-4" />
+                <h5 className="font-semibold text-card-foreground mb-2">Estabilizantes</h5>
+                <p className="text-sm text-muted-foreground">Celulose microcristalina, Fosfato tricálcico</p>
+              </div>
             </div>
           </div>
         </div>
