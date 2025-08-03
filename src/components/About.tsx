@@ -74,7 +74,7 @@ const About = () => {
 
               <div className="flex justify-center lg:justify-end">
                 <img 
-                  src="/lovable-uploads/47d1c536-59d7-41a7-bfd4-6f6d5b9d33b3.png" 
+                  src="/lovable-uploads/6b195fff-dab1-45f0-bf34-232664f3ebf2.png" 
                   alt="Genoxidil Suplemento" 
                   className="w-64 h-64 object-contain"
                 />
