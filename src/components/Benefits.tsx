@@ -97,13 +97,22 @@ const Benefits = () => {
               </div>
             </div>
             
-            <div className="bg-accent rounded-2xl p-8">
-              <div className="text-center">
+            <div 
+              className="rounded-2xl p-8 relative"
+              style={{
+                backgroundImage: 'url(/lovable-uploads/2dbb08b8-8ce4-4ad0-ac28-58ae08d0db35.png)',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat'
+              }}
+            >
+              <div className="absolute inset-0 bg-black/40 rounded-2xl"></div>
+              <div className="relative z-10 text-center">
                 <div className="w-20 h-20 bg-secondary rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <Heart className="w-10 h-10 text-secondary-foreground" />
                 </div>
-                <h4 className="text-xl font-bold text-accent-foreground mb-2">Saúde Cardiovascular</h4>
-                <p className="text-accent-foreground/80">
+                <h4 className="text-xl font-bold text-white mb-2">Saúde Cardiovascular</h4>
+                <p className="text-white/90">
                   Promove a saúde do coração e da circulação através da proteção antioxidante 
                   e melhora da função endotelial.
                 </p>
