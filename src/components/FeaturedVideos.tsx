@@ -29,7 +29,8 @@ const FeaturedVideos = () => {
       description: 'Conheça a tecnologia inovadora que está mudando o conceito de multivitamínicos.',
       duration: '8:45',
       views: '89K',
-      category: 'Produto'
+      category: 'Produto',
+      videoUrl: 'https://youtu.be/fl2_8yjlqQI'
     },
     {
       id: 3,
