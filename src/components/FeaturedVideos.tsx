@@ -2,6 +2,17 @@
 import { Play, Award, Users, TrendingUp } from 'lucide-react';
 
 const FeaturedVideos = () => {
+  const getYouTubeVideoId = (url: string) => {
+    const regex = /(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&\n?#]+)/;
+    const match = url.match(regex);
+    return match ? match[1] : null;
+  };
+
+  const getYouTubeThumbnail = (url: string) => {
+    const videoId = getYouTubeVideoId(url);
+    return videoId ? `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg` : null;
+  };
+
   const videos = [
     {
       id: 1,
@@ -46,12 +57,28 @@ const FeaturedVideos = () => {
         <div className="grid lg:grid-cols-3 gap-8 mb-12">
           {videos.map((video) => (
             <div key={video.id} className="bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow group">
-              <div className="relative bg-muted h-48 flex items-center justify-center">
+              <div className="relative h-48 overflow-hidden">
+                {video.videoUrl ? (
+                  <img 
+                    src={getYouTubeThumbnail(video.videoUrl) || ''} 
+                    alt={video.title}
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      e.currentTarget.style.display = 'none';
+                      e.currentTarget.parentElement!.classList.add('bg-muted', 'flex', 'items-center', 'justify-center');
+                    }}
+                  />
+                ) : (
+                  <div className="bg-muted h-full flex items-center justify-center" />
+                )}
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors" />
                 <button 
-                  className="relative z-10 w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform"
+                  className="absolute inset-0 flex items-center justify-center"
                   onClick={() => video.videoUrl && window.open(video.videoUrl, '_blank')}
                 >
-                  <Play className="w-6 h-6 text-primary ml-1" />
+                  <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                    <Play className="w-6 h-6 text-primary ml-1" />
+                  </div>
                 </button>
                 <div className="absolute top-4 left-4 bg-black/70 text-white px-2 py-1 rounded text-sm">
                   {video.duration}
