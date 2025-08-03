@@ -147,25 +147,25 @@ const FeaturedVideos = () => {
 
         {/* Video Modal */}
         {selectedVideo && (
-          <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4">
-            <div className="bg-white rounded-lg overflow-hidden max-w-4xl w-full max-h-[90vh]">
-              <div className="flex justify-between items-center p-4 border-b">
-                <h3 className="text-lg font-semibold">Reproduzindo vídeo</h3>
+          <div className="fixed inset-0 bg-black/90 flex items-center justify-center z-50 p-4">
+            <div className="bg-white rounded-lg overflow-hidden max-w-5xl w-full max-h-[90vh] relative">
+              <div className="flex justify-between items-center p-4 border-b bg-white">
+                <h3 className="text-lg font-semibold text-gray-900">Reproduzindo vídeo</h3>
                 <button 
                   onClick={() => setSelectedVideo(null)}
-                  className="p-2 hover:bg-gray-100 rounded-full transition-colors"
+                  className="p-2 hover:bg-gray-100 rounded-full transition-colors text-gray-600 hover:text-gray-900"
                 >
                   <X className="w-5 h-5" />
                 </button>
               </div>
-              <div className="aspect-video">
+              <div className="relative w-full" style={{ paddingBottom: '56.25%' /* 16:9 aspect ratio */ }}>
                 <iframe
-                  src={`https://www.youtube.com/embed/${selectedVideo}?autoplay=1`}
+                  src={`https://www.youtube.com/embed/${selectedVideo}?autoplay=1&rel=0`}
                   title="YouTube video player"
                   frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowFullScreen
-                  className="w-full h-full"
+                  className="absolute top-0 left-0 w-full h-full"
                 ></iframe>
               </div>
             </div>
