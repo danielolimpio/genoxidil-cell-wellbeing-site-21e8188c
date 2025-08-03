@@ -1,7 +1,10 @@
 
-import { Play, Award, Users, TrendingUp } from 'lucide-react';
+import { Play, Award, Users, TrendingUp, X } from 'lucide-react';
+import { useState } from 'react';
 
 const FeaturedVideos = () => {
+  const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
+
   const getYouTubeVideoId = (url: string) => {
     const regex = /(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&\n?#]+)/;
     const match = url.match(regex);
@@ -38,7 +41,8 @@ const FeaturedVideos = () => {
       description: 'A diferença entre antioxidantes naturais e sintéticos e por que isso importa para sua saúde.',
       duration: '15:20',
       views: '76K',
-      category: 'Educação'
+      category: 'Educação',
+      videoUrl: 'https://youtu.be/xVPtUkTp-rU'
     }
   ];
 
@@ -75,7 +79,14 @@ const FeaturedVideos = () => {
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors" />
                 <button 
                   className="absolute inset-0 flex items-center justify-center"
-                  onClick={() => video.videoUrl && window.open(video.videoUrl, '_blank')}
+                  onClick={() => {
+                    if (video.videoUrl) {
+                      const videoId = getYouTubeVideoId(video.videoUrl);
+                      if (videoId) {
+                        setSelectedVideo(videoId);
+                      }
+                    }
+                  }}
                 >
                   <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
                     <Play className="w-6 h-6 text-primary ml-1" />
@@ -133,6 +144,33 @@ const FeaturedVideos = () => {
             </button>
           </div>
         </div>
+
+        {/* Video Modal */}
+        {selectedVideo && (
+          <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4">
+            <div className="bg-white rounded-lg overflow-hidden max-w-4xl w-full max-h-[90vh]">
+              <div className="flex justify-between items-center p-4 border-b">
+                <h3 className="text-lg font-semibold">Reproduzindo vídeo</h3>
+                <button 
+                  onClick={() => setSelectedVideo(null)}
+                  className="p-2 hover:bg-gray-100 rounded-full transition-colors"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
+              <div className="aspect-video">
+                <iframe
+                  src={`https://www.youtube.com/embed/${selectedVideo}?autoplay=1`}
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );
