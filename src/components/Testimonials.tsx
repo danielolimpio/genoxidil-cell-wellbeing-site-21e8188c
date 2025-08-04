@@ -1,7 +1,15 @@
 
-import { Star, Quote, Play, CheckCircle } from 'lucide-react';
+import { Star, Quote, Play, CheckCircle, X } from 'lucide-react';
+import { useState } from 'react';
 
 const Testimonials = () => {
+  const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
+
+  const getYouTubeVideoId = (url: string) => {
+    const regex = /(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([^&\n?#]+)/;
+    const match = url.match(regex);
+    return match ? match[1] : null;
+  };
   const testimonials = [
     {
       id: 1,
@@ -32,10 +40,11 @@ const Testimonials = () => {
   const videoTestimonials = [
     {
       id: 1,
-      name: 'Ana Costa',
-      role: 'Professora',
+      name: 'Ana Isabel',
+      role: 'Terapeuta',
       thumbnail: 'Depoimento em vídeo',
-      duration: '2:45'
+      duration: '2:45',
+      videoUrl: 'https://youtu.be/t-2XPZGhNTQ'
     },
     {
       id: 2,
@@ -109,7 +118,17 @@ const Testimonials = () => {
             {videoTestimonials.map((video) => (
               <div key={video.id} className="bg-card rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow group">
                 <div className="relative bg-primary h-40 flex items-center justify-center">
-                  <button className="relative z-10 w-12 h-12 bg-card rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                  <button 
+                    className="relative z-10 w-12 h-12 bg-card rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform"
+                    onClick={() => {
+                      if (video.videoUrl) {
+                        const videoId = getYouTubeVideoId(video.videoUrl);
+                        if (videoId) {
+                          setSelectedVideo(videoId);
+                        }
+                      }
+                    }}
+                  >
                     <Play className="w-5 h-5 text-primary ml-0.5" />
                   </button>
                   <div className="absolute bottom-4 left-4 bg-secondary text-secondary-foreground px-2 py-1 rounded text-sm">
@@ -140,6 +159,33 @@ const Testimonials = () => {
             Experimente Agora
           </button>
         </div>
+
+        {/* Video Modal */}
+        {selectedVideo && (
+          <div className="fixed inset-0 bg-black/90 flex items-center justify-center z-50 p-4">
+            <div className="bg-white rounded-lg overflow-hidden max-w-5xl w-full max-h-[90vh] relative">
+              <div className="flex justify-between items-center p-4 border-b bg-white">
+                <h3 className="text-lg font-semibold text-gray-900">Reproduzindo depoimento</h3>
+                <button 
+                  onClick={() => setSelectedVideo(null)}
+                  className="p-2 hover:bg-gray-100 rounded-full transition-colors text-gray-600 hover:text-gray-900"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
+              <div className="relative w-full" style={{ paddingBottom: '56.25%' /* 16:9 aspect ratio */ }}>
+                <iframe
+                  src={`https://www.youtube.com/embed/${selectedVideo}?autoplay=1&rel=0`}
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  className="absolute top-0 left-0 w-full h-full"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );
