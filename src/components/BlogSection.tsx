@@ -14,29 +14,29 @@ const BlogSection = () => {
       category: 'Ciência',
       featured: true,
       image: '/lovable-uploads/899d038e-e71e-4dd8-869e-f8ae2b9a45dd.png',
-      slug: 'proteina-nrf2-saude'
+      slug: 'proteina-nrf2-fundamental-saude'
     },
     {
       id: 2,
-      title: 'Estresse Oxidativo: O Inimigo Silencioso da Sua Saúde',
-      excerpt: 'Entenda como os radicais livres afetam seu organismo e como o Genoxidil pode ajudar na proteção celular.',
+      title: 'Estresse Oxidativo: Como Proteger Suas Células dos Radicais Livres',
+      excerpt: 'Descubra como o estresse oxidativo acelera o envelhecimento e aprenda estratégias cientificamente comprovadas para combater radicais livres.',
       author: 'Dra. Ana Silva',
       date: '12 Jan 2024',
       readTime: '7 min',
       category: 'Saúde',
       image: '/lovable-uploads/95fc8720-74f6-47b0-8e51-8afd359da6cc.png',
-      slug: 'estresse-oxidativo-inimigo-silencioso'
+      slug: 'estresse-oxidativo-inimigo-silencioso-saude'
     },
     {
       id: 3,
-      title: 'Antioxidantes Naturais: A Diferença que Faz a Diferença',
-      excerpt: 'Por que escolher antioxidantes naturais como Astaxantina e Trans-resveratrol para sua suplementação.',
+      title: 'Antioxidantes Naturais vs Sintéticos: Por Que a Natureza Vence',
+      excerpt: 'Descubra a superioridade científica dos antioxidantes naturais como Astaxantina e Trans-resveratrol para sua saúde celular.',
       author: 'Dr. Carlos Mendes',
       date: '10 Jan 2024',
       readTime: '6 min',
       category: 'Nutrição',
       image: '/lovable-uploads/8c7dac5e-b7e0-49c0-8b4c-46b4f50a1026.png',
-      slug: 'antioxidantes-naturais-diferenca'
+      slug: 'antioxidantes-naturais-superioridade-cientifica'
     },
     {
       id: 4,
