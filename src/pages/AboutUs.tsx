@@ -93,7 +93,7 @@ const AboutUs = () => {
               <img 
                 src="/lovable-uploads/529f578b-3241-4eb4-a569-8b921817b603.png" 
                 alt="NBN Living Laboratório" 
-                className="w-full h-64 object-contain drop-shadow-lg"
+                className="w-full h-96 lg:h-[500px] object-contain drop-shadow-lg"
                 style={{ filter: 'drop-shadow(0 10px 25px rgba(0,0,0,0.1))' }}
               />
             </div>
@@ -207,11 +207,11 @@ const AboutUs = () => {
                   </p>
                 </div>
 
-                <div className="flex justify-center items-center">
+                <div className="flex justify-center items-center h-80 lg:h-96">
                   <img 
                     src="/lovable-uploads/23ffa2e1-bab1-4682-b7d1-37bf5dd4186c.png" 
                     alt="Complexo NBN Living" 
-                    className="w-full max-w-sm h-64 object-contain drop-shadow-xl"
+                    className="w-full max-w-lg h-full object-contain drop-shadow-xl"
                     style={{ filter: 'drop-shadow(0 15px 35px rgba(0,0,0,0.15))' }}
                   />
                 </div>
