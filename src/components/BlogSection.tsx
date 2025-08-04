@@ -12,7 +12,7 @@ const BlogSection = () => {
       readTime: '5 min',
       category: 'Ciência',
       featured: true,
-      image: '/lovable-uploads/c9a9b6c1-2493-432d-928d-eddaa96390e1.png'
+      image: '/lovable-uploads/899d038e-e71e-4dd8-869e-f8ae2b9a45dd.png'
     },
     {
       id: 2,
