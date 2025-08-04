@@ -89,12 +89,16 @@ const AboutUs = () => {
               </div>
             </div>
 
-            <div className="bg-primary rounded-2xl p-8 text-center">
+            <div className="relative">
               <img 
                 src="/lovable-uploads/529f578b-3241-4eb4-a569-8b921817b603.png" 
                 alt="NBN Living Laboratório" 
-                className="w-full h-64 object-cover rounded-lg mb-6"
+                className="w-full h-64 object-contain drop-shadow-lg"
+                style={{ filter: 'drop-shadow(0 10px 25px rgba(0,0,0,0.1))' }}
               />
+            </div>
+            
+            <div className="bg-primary rounded-2xl p-8 text-center mt-8 lg:mt-0">
               <h3 className="text-2xl font-bold text-primary-foreground mb-4">
                 Chegamos ao Brasil em Novembro de 2021
               </h3>
@@ -203,11 +207,12 @@ const AboutUs = () => {
                   </p>
                 </div>
 
-                <div className="bg-gradient-to-br from-primary/10 to-secondary/10 p-6 rounded-xl">
+                <div className="flex justify-center items-center">
                   <img 
                     src="/lovable-uploads/23ffa2e1-bab1-4682-b7d1-37bf5dd4186c.png" 
                     alt="Complexo NBN Living" 
-                    className="w-full h-64 object-cover rounded-lg"
+                    className="w-full max-w-sm h-64 object-contain drop-shadow-xl"
+                    style={{ filter: 'drop-shadow(0 15px 35px rgba(0,0,0,0.15))' }}
                   />
                 </div>
               </div>
