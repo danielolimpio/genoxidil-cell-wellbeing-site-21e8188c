@@ -11,7 +11,8 @@ const BlogSection = () => {
       date: '15 Jan 2024',
       readTime: '5 min',
       category: 'Ciência',
-      featured: true
+      featured: true,
+      image: '/lovable-uploads/c9a9b6c1-2493-432d-928d-eddaa96390e1.png'
     },
     {
       id: 2,
@@ -20,7 +21,8 @@ const BlogSection = () => {
       author: 'Dra. Ana Silva',
       date: '12 Jan 2024',
       readTime: '7 min',
-      category: 'Saúde'
+      category: 'Saúde',
+      image: '/lovable-uploads/95fc8720-74f6-47b0-8e51-8afd359da6cc.png'
     },
     {
       id: 3,
@@ -29,7 +31,8 @@ const BlogSection = () => {
       author: 'Dr. Carlos Mendes',
       date: '10 Jan 2024',
       readTime: '6 min',
-      category: 'Nutrição'
+      category: 'Nutrição',
+      image: '/lovable-uploads/8c7dac5e-b7e0-49c0-8b4c-46b4f50a1026.png'
     },
     {
       id: 4,
@@ -38,7 +41,8 @@ const BlogSection = () => {
       author: 'Dra. Maria Santos',
       date: '8 Jan 2024',
       readTime: '8 min',
-      category: 'Longevidade'
+      category: 'Longevidade',
+      image: '/lovable-uploads/21493484-bf1c-499c-b124-dd49850909b3.png'
     },
     {
       id: 5,
@@ -47,7 +51,8 @@ const BlogSection = () => {
       author: 'Dr. Ricardo Costa',
       date: '5 Jan 2024',
       readTime: '4 min',
-      category: 'Vitaminas'
+      category: 'Vitaminas',
+      image: '/lovable-uploads/742f2448-5081-4e5b-8d45-a2c1aa4332a6.png'
     },
     {
       id: 6,
@@ -56,7 +61,8 @@ const BlogSection = () => {
       author: 'Dra. Lucia Fernandes',
       date: '3 Jan 2024',
       readTime: '6 min',
-      category: 'Detox'
+      category: 'Detox',
+      image: '/lovable-uploads/564ec4b2-8f99-4ca1-90e8-ea872d0a9e89.png'
     }
   ];
 
@@ -128,13 +134,12 @@ const BlogSection = () => {
                   </button>
                 </div>
                 <div className="bg-white rounded-2xl p-8 shadow-lg">
-                  <div className="aspect-video bg-gradient-to-br from-accent/20 to-accent/10 rounded-lg flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="w-16 h-16 bg-accent rounded-2xl flex items-center justify-center mx-auto mb-4">
-                        <span className="text-accent-foreground font-bold text-xl">G</span>
-                      </div>
-                      <p className="text-gray-600">Artigo em Destaque</p>
-                    </div>
+                  <div className="aspect-video rounded-lg overflow-hidden">
+                    <img 
+                      src={post.image} 
+                      alt={post.title}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                 </div>
               </div>
@@ -147,12 +152,16 @@ const BlogSection = () => {
             .filter(post => !post.featured)
             .map((post) => (
               <article key={post.id} className="bg-gray-50 rounded-2xl overflow-hidden hover:shadow-lg transition-shadow group">
-                <div className="bg-gradient-to-br from-accent/20 to-accent/10 h-48 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-12 h-12 bg-accent rounded-xl flex items-center justify-center mx-auto mb-2">
-                      <span className="text-accent-foreground font-bold">G</span>
-                    </div>
-                    <span className="text-accent font-medium text-sm">{post.category}</span>
+                <div className="relative h-48 overflow-hidden">
+                  <img 
+                    src={post.image} 
+                    alt={post.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute top-4 left-4">
+                    <span className="bg-accent text-accent-foreground px-3 py-1 rounded-full text-sm font-medium">
+                      {post.category}
+                    </span>
                   </div>
                 </div>
                 
