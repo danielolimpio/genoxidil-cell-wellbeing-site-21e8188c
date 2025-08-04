@@ -1,5 +1,6 @@
 
 import { Calendar, User, ArrowRight, Clock } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const BlogSection = () => {
   const blogPosts = [
@@ -12,7 +13,8 @@ const BlogSection = () => {
       readTime: '5 min',
       category: 'Ciência',
       featured: true,
-      image: '/lovable-uploads/899d038e-e71e-4dd8-869e-f8ae2b9a45dd.png'
+      image: '/lovable-uploads/899d038e-e71e-4dd8-869e-f8ae2b9a45dd.png',
+      slug: 'proteina-nrf2-saude'
     },
     {
       id: 2,
@@ -22,7 +24,8 @@ const BlogSection = () => {
       date: '12 Jan 2024',
       readTime: '7 min',
       category: 'Saúde',
-      image: '/lovable-uploads/95fc8720-74f6-47b0-8e51-8afd359da6cc.png'
+      image: '/lovable-uploads/95fc8720-74f6-47b0-8e51-8afd359da6cc.png',
+      slug: 'estresse-oxidativo-inimigo-silencioso'
     },
     {
       id: 3,
@@ -32,7 +35,8 @@ const BlogSection = () => {
       date: '10 Jan 2024',
       readTime: '6 min',
       category: 'Nutrição',
-      image: '/lovable-uploads/8c7dac5e-b7e0-49c0-8b4c-46b4f50a1026.png'
+      image: '/lovable-uploads/8c7dac5e-b7e0-49c0-8b4c-46b4f50a1026.png',
+      slug: 'antioxidantes-naturais-diferenca'
     },
     {
       id: 4,
@@ -42,7 +46,8 @@ const BlogSection = () => {
       date: '8 Jan 2024',
       readTime: '8 min',
       category: 'Longevidade',
-      image: '/lovable-uploads/21493484-bf1c-499c-b124-dd49850909b3.png'
+      image: '/lovable-uploads/21493484-bf1c-499c-b124-dd49850909b3.png',
+      slug: 'saude-celular-segredo-longevidade'
     },
     {
       id: 5,
@@ -52,7 +57,8 @@ const BlogSection = () => {
       date: '5 Jan 2024',
       readTime: '4 min',
       category: 'Vitaminas',
-      image: '/lovable-uploads/742f2448-5081-4e5b-8d45-a2c1aa4332a6.png'
+      image: '/lovable-uploads/742f2448-5081-4e5b-8d45-a2c1aa4332a6.png',
+      slug: 'vitaminas-complexo-b-energia-celulas'
     },
     {
       id: 6,
@@ -62,7 +68,8 @@ const BlogSection = () => {
       date: '3 Jan 2024',
       readTime: '6 min',
       category: 'Detox',
-      image: '/lovable-uploads/564ec4b2-8f99-4ca1-90e8-ea872d0a9e89.png'
+      image: '/lovable-uploads/564ec4b2-8f99-4ca1-90e8-ea872d0a9e89.png',
+      slug: 'desintoxicacao-natural-corpo-limpa'
     }
   ];
 
@@ -128,10 +135,13 @@ const BlogSection = () => {
                       </div>
                     </div>
                   </div>
-                  <button className="bg-accent text-accent-foreground px-6 py-3 rounded-lg font-medium hover:bg-accent/90 transition-all flex items-center">
+                  <Link 
+                    to={`/blog/${post.slug}`}
+                    className="bg-accent text-accent-foreground px-6 py-3 rounded-lg font-medium hover:bg-accent/90 transition-all flex items-center inline-flex"
+                  >
                     Ler Artigo Completo
                     <ArrowRight className="ml-2 w-4 h-4" />
-                  </button>
+                  </Link>
                 </div>
                 <div className="bg-white rounded-2xl p-8 shadow-lg">
                   <div className="aspect-video rounded-lg overflow-hidden">
@@ -190,10 +200,13 @@ const BlogSection = () => {
                     </div>
                   </div>
                   
-                  <button className="text-accent font-medium text-sm hover:text-accent/80 transition-colors flex items-center">
+                  <Link 
+                    to={`/blog/${post.slug}`}
+                    className="text-accent font-medium text-sm hover:text-accent/80 transition-colors flex items-center"
+                  >
                     Ler mais
                     <ArrowRight className="ml-1 w-3 h-3" />
-                  </button>
+                  </Link>
                 </div>
               </article>
             ))}
