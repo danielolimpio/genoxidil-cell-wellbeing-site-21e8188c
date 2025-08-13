@@ -9,16 +9,11 @@ import BlogSection from '@/components/BlogSection';
 import FAQ from '@/components/FAQ';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
-import SEO from "@/components/SEO";
+
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title="Genoxidil | Suplemento Nrf2 e Regeneração Celular"
-        description="Genoxidil ativa a proteína Nrf2 para regeneração celular, antioxidantes naturais e bem-estar. Conheça benefícios, ingredientes e depoimentos."
-        canonical="https://genoxidil.blog/"
-      />
       <Header />
       <Hero />
       <Benefits />
