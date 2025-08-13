@@ -26,7 +26,7 @@ const Products = () => {
     name: "Sistema de Desintoxicação",
     description: "elimina toxinas e metais pesados"
   }];
-  const conditions = ["Diabetes", "Câncer", "Parkinson", "Alzheimer", "Lúpus", "Hipertensão", "Esclerose Múltipla", "Artrite", "Artrose", "Fibromialgia", "Dores Articulares", "Gastrite", "Reumatismo", "Impotência Sexual", "Enxaqueca", "Obesidade", "Anemia", "Insônia", "Depressão", "Cansaço", "Problemas de memória e visão"];
+  const conditions = ["Diabetes", "Câncer", "Parkinson", "Alzheimer", "Lúpus", "Hipertensão", "Esclerose Múltipla", "Artrite", "Artrose", "Fibromialgia", "Dores Articulares", "Gastrite", "Reumatismo", "Impotência Sexual", "Enxaqueca", "Obesidade", "Anemia", "Insônia", "Depressão", "Cansaço", "Problemas de memória e visão", "Asma", "Bronquite", "Miomas", "Neuropatia Ciática", "Osteoporose", "Problemas Renais", "Próstata", "Triglicerídeos", "Trombose", "Úlcera", "Varizes"];
   const ingredients = ["Espirulina", "Resveratrol", "Licopeno", "Clorofila", "Astaxantina", "Vitaminas e minerais essenciais", "Proteínas NRF1 e NRF2"];
   const advantages = [{
     icon: <CheckCircle className="h-5 w-5" />,
@@ -69,7 +69,93 @@ const Products = () => {
     question: "Vocês oferecem garantia?",
     answer: "Sim! Oferecemos garantia de satisfação com reembolso em até 7 dias caso não esteja satisfeito com o produto."
   }];
+
+  const hiddenKeywords = [
+    "Genoxidil",
+    "NBN Living",
+    "Proteína Nrf2",
+    "alzheimer",
+    "anemia",
+    "antiparasitário",
+    "antitumoral",
+    "antiviral",
+    "artrose",
+    "artrite",
+    "asma",
+    "bronquite",
+    "câncer",
+    "cálculos",
+    "cirrose",
+    "colesterol",
+    "colite",
+    "diabetes",
+    "desinflamatório",
+    "doenças renais",
+    "estreitamento intestinal",
+    "esclerose múltipla",
+    "falta hormonal",
+    "gastrite",
+    "genoxidil benefícios",
+    "genoxidil para alzheimer",
+    "genoxidil para anemia",
+    "genoxidil para artrite",
+    "genoxidil para artrose",
+    "genoxidil para asma",
+    "genoxidil para câncer",
+    "genoxidil para colite",
+    "genoxidil para colesterol",
+    "genoxidil para diabetes",
+    "genoxidil para doenças renais",
+    "genoxidil para esclerose múltipla",
+    "genoxidil para gastrite",
+    "genoxidil para hepatite",
+    "genoxidil para hipertensão",
+    "genoxidil para hipoparatiroidismo",
+    "genoxidil para impotência",
+    "genoxidil para insônia",
+    "genoxidil para lúpus",
+    "genoxidil para miomas",
+    "genoxidil para migraña",
+    "genoxidil para neuropatia ciática",
+    "genoxidil para obesidade",
+    "genoxidil para osteoporose",
+    "genoxidil para parkinson",
+    "genoxidil para problemas renais",
+    "genoxidil para próstata",
+    "genoxidil para trombose",
+    "genoxidil para triglicerídeos",
+    "genoxidil para úlcera",
+    "genoxidil para varizes",
+    "genoxidil saúde",
+    "herpes",
+    "hepatite",
+    "hipertensão",
+    "hipoparatiroidismo",
+    "impotência",
+    "insônia",
+    "lúpus",
+    "miomas",
+    "migraña",
+    "neuropatia ciática",
+    "nrf2",
+    "obesidade",
+    "osteoporose",
+    "parkinson",
+    "próstata",
+    "problemas renais",
+    "rins",
+    "triglicerídeos",
+    "trombose",
+    "úlcera",
+    "varizes"
+  ];
   return <div className="min-h-screen bg-background">
+      <SEO
+        title="Genoxidil - Suplemento de Regeneração Celular | NBN Living"
+        description="Genoxidil: regeneração celular e ativação da proteína Nrf2. Veja benefícios, indicações de uso e composição."
+        canonical="https://genoxidil.blog/produtos"
+        keywords={hiddenKeywords}
+      />
       <Header />
       
       {/* Hero Section */}
@@ -212,9 +298,6 @@ const Products = () => {
                       {condition}
                     </Badge>)}
                 </div>
-                <p className="text-sm text-muted-foreground mt-4">
-                  Também é pesquisado e referenciado como: genoxidil benefícios; genoxidil para alzheimer, anemia, artrite, artrose, asma, bronquite, câncer, colite, colesterol, diabetes, doenças renais, esclerose múltipla, gastrite, hepatite, hipertensão, hipoparatiroidismo, impotência, insônia, lúpus, miomas, enxaqueca/migraña, neuropatia ciática, obesidade, osteoporose, parkinson, problemas renais, próstata, triglicerídeos, trombose, úlcera, varizes; além de termos relacionados: NBN Living, proteína Nrf2, nrf2, antiparasitário, antitumoral, antiviral, desinflamatório, rins, cálculos, cirrose e estreitamento intestinal.
-                </p>
               </div>
 
               <Separator />

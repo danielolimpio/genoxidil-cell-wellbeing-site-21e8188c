@@ -7,9 +7,10 @@ export type SEOProps = {
   image?: string;
   jsonLd?: object | object[];
   robots?: string;
+  keywords?: string | string[];
 };
 
-const SEO = ({ title, description, canonical, image, jsonLd, robots }: SEOProps) => {
+const SEO = ({ title, description, canonical, image, jsonLd, robots, keywords }: SEOProps) => {
   const jsonArray = Array.isArray(jsonLd) ? jsonLd : jsonLd ? [jsonLd] : [];
 
   return (
@@ -17,6 +18,12 @@ const SEO = ({ title, description, canonical, image, jsonLd, robots }: SEOProps)
       <Helmet>
         <title>{title}</title>
         <meta name="description" content={description} />
+        {keywords && (
+          <meta
+            name="keywords"
+            content={Array.isArray(keywords) ? keywords.join(", ") : keywords}
+          />
+        )}
         {robots && <meta name="robots" content={robots} />}
         {canonical && <link rel="canonical" href={canonical} />}
 
