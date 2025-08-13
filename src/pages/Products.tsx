@@ -7,6 +7,7 @@ import { Separator } from "@/components/ui/separator";
 import { CheckCircle, Shield, Truck, Phone, CreditCard, Users, Gift, Star } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 const Products = () => {
   const benefits = ["Regeneração de células-tronco", "Estímulo à longevidade celular", "Fortalecimento do sistema imune", "Redução de inflamações e dores", "Equilíbrio metabólico e mais energia no dia a dia"];
   const systems = [{
@@ -125,9 +126,12 @@ const Products = () => {
                     <p className="text-lg text-muted-foreground">
                       Atua na regeneração celular, ativando a proteína NRF2 para combater o envelhecimento e fortalecer o organismo.
                     </p>
+                    <p className="text-lg text-muted-foreground">
+                      Saiba mais sobre a <a href="/sobre" className="text-primary underline underline-offset-2">NBN Living</a> e nossa tecnologia.
+                    </p>
                   </div>
                   <div className="flex justify-center">
-                    <img src="/lovable-uploads/a2a45f78-dcf9-411b-8f57-8d39ffdcfe88.png" alt="Certificações Genoxidil" className="w-full max-w-sm object-contain" />
+                    <img src="/lovable-uploads/a2a45f78-dcf9-411b-8f57-8d39ffdcfe88.png" alt="Certificações Genoxidil" className="w-full max-w-sm object-contain" loading="lazy" decoding="async" sizes="(min-width: 768px) 400px, 100vw" />
                   </div>
                 </div>
               </div>
@@ -174,7 +178,7 @@ const Products = () => {
                     </div>)}
                 </div>
                 <div className="mt-8 flex justify-center">
-                  <img src="/lovable-uploads/0e94673e-0098-4131-9d67-3267472bb4e7.png" alt="Casal feliz e saudável" className="w-full max-w-md object-contain rounded-lg" />
+                  <img src="/lovable-uploads/0e94673e-0098-4131-9d67-3267472bb4e7.png" alt="Casal feliz e saudável" className="w-full max-w-md object-contain rounded-lg" loading="lazy" decoding="async" sizes="(min-width: 768px) 512px, 100vw" />
                 </div>
               </div>
 
@@ -208,6 +212,9 @@ const Products = () => {
                       {condition}
                     </Badge>)}
                 </div>
+                <p className="text-sm text-muted-foreground mt-4">
+                  Também é pesquisado e referenciado como: genoxidil benefícios; genoxidil para alzheimer, anemia, artrite, artrose, asma, bronquite, câncer, colite, colesterol, diabetes, doenças renais, esclerose múltipla, gastrite, hepatite, hipertensão, hipoparatiroidismo, impotência, insônia, lúpus, miomas, enxaqueca/migraña, neuropatia ciática, obesidade, osteoporose, parkinson, problemas renais, próstata, triglicerídeos, trombose, úlcera, varizes; além de termos relacionados: NBN Living, proteína Nrf2, nrf2, antiparasitário, antitumoral, antiviral, desinflamatório, rins, cálculos, cirrose e estreitamento intestinal.
+                </p>
               </div>
 
               <Separator />
@@ -235,7 +242,7 @@ const Products = () => {
             <div className="space-y-6">
               <Card className="sticky top-24">
                 <CardHeader>
-                  <img src="/lovable-uploads/568b97a3-2e2b-4780-80b6-eeb6a7e70709.png" alt="Rótulo Genoxidil" className="w-full object-contain mb-4" />
+                  <img src="/lovable-uploads/568b97a3-2e2b-4780-80b6-eeb6a7e70709.png" alt="Rótulo Genoxidil" className="w-full object-contain mb-4" loading="lazy" decoding="async" sizes="(min-width: 768px) 360px, 100vw" />
                   <CardTitle className="text-center">Informações do Produto</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">

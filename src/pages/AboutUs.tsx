@@ -1,6 +1,7 @@
 import { Building2, Globe, Target, Eye, MapPin, Users, Microscope, Award } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import SEO from "@/components/SEO";
 
 const AboutUs = () => {
   return (
