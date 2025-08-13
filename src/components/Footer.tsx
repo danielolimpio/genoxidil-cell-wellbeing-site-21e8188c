@@ -4,24 +4,24 @@ import { Facebook, Instagram, Youtube, Twitter, Mail, Phone, MapPin, Shield } fr
 const Footer = () => {
   const footerLinks = {
     company: [
-      { name: 'Home', href: '#home' },
-      { name: 'Sobre', href: '#sobre' },
-      { name: 'Produtos', href: '#produtos' },
-      { name: 'Blog', href: '#blog' },
-      { name: 'FAQ', href: '#faq' },
-      { name: 'Contato', href: '#contato' }
+      { name: 'Home', href: '/' },
+      { name: 'Sobre', href: '/sobre' },
+      { name: 'Produtos', href: '/produtos' },
+      { name: 'Blog', href: '/blog' },
+      { name: 'FAQ', href: '/faq' },
+      { name: 'Contato', href: '/contato' }
     ],
     legal: [
-      { name: 'Política de Privacidade', href: '#privacy' },
-      { name: 'Política de Cookies', href: '#cookies' },
-      { name: 'Termos de Uso', href: '#terms' },
-      { name: 'Política de Transparência', href: '#transparency' },
-      { name: 'Política de Reembolso', href: '#refund' }
+      { name: 'Política de Privacidade', href: '/politica-de-privacidade' },
+      { name: 'Política de Cookies', href: '/politica-de-cookies' },
+      { name: 'Termos de Uso', href: '/termos-de-uso' },
+      { name: 'Política de Transparência', href: '/politica-de-transparencia' },
+      { name: 'Política de Reembolso', href: '/politica-de-reembolso' }
     ],
     business: [
-      { name: 'Promoções', href: '#promotions' },
-      { name: 'Afiliados', href: '#affiliates' },
-      { name: 'Revenda', href: '#resale' }
+      { name: 'Promoções', href: '/#promocoes' },
+      { name: 'Afiliados', href: '/#afiliados' },
+      { name: 'Revenda', href: '/#revenda' }
     ]
   };
 

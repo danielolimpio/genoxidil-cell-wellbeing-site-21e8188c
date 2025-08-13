@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://genoxidil.blog/</loc>
-  </url>
-  <url>
-    <loc>https://genoxidil.blog/sobre</loc>
-  </url>
-  <url>
-    <loc>https://genoxidil.blog/produtos</loc>
-  </url>
+  <url><loc>https://genoxidil.blog/</loc></url>
+  <url><loc>https://genoxidil.blog/sobre</loc></url>
+  <url><loc>https://genoxidil.blog/produtos</loc></url>
+  <url><loc>https://genoxidil.blog/blog</loc></url>
+  <url><loc>https://genoxidil.blog/faq</loc></url>
+  <url><loc>https://genoxidil.blog/contato</loc></url>
+  <url><loc>https://genoxidil.blog/politica-de-privacidade</loc></url>
+  <url><loc>https://genoxidil.blog/politica-de-cookies</loc></url>
+  <url><loc>https://genoxidil.blog/termos-de-uso</loc></url>
+  <url><loc>https://genoxidil.blog/politica-de-transparencia</loc></url>
+  <url><loc>https://genoxidil.blog/politica-de-reembolso</loc></url>
 </urlset>
