@@ -287,8 +287,8 @@ const GenoxidilAutismo = () => {
                 Quer saber mais sobre depoimentos reais, protocolos personalizados ou dados científicos completos?
               </p>
               <div className="space-y-2">
-                <p><strong>Site oficial:</strong> www.nbnliving.com.br</p>
-                <p><strong>WhatsApp:</strong> (11) 9XXXX-XXXX</p>
+                <p><strong>Site NBN Living:</strong> https://nbnliving.news/</p>
+                <p><strong>WhatsApp:</strong> (12) 98251-9116</p>
                 <p><strong>Biblioteca científica:</strong> Relatórios Científicos Genoxidil TEA</p>
               </div>
             </div>
