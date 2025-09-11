@@ -17,6 +17,7 @@ import CookiesPolicy from "./pages/CookiesPolicy";
 import TermsOfUse from "./pages/TermsOfUse";
 import TransparencyPolicy from "./pages/TransparencyPolicy";
 import RefundPolicy from "./pages/RefundPolicy";
+import GenoxidilAutismo from "./pages/GenoxidilAutismo";
 
 const queryClient = new QueryClient();
 
@@ -32,6 +33,7 @@ const App = () => (
               <Route path="/sobre" element={<AboutUs />} />
               <Route path="/produtos" element={<Products />} />
               <Route path="/blog" element={<Blog />} />
+              <Route path="/genoxidil-autismo" element={<GenoxidilAutismo />} />
               <Route path="/faq" element={<FAQPage />} />
               <Route path="/contato" element={<ContactPage />} />
               <Route path="/politica-de-privacidade" element={<PrivacyPolicy />} />

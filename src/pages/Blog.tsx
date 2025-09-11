@@ -8,6 +8,17 @@ import { Clock, Tag, User, Bookmark, Filter } from "lucide-react";
 const basePosts = [
   {
     id: 1,
+    title: "Genoxidil para Autismo: A Ciência que Está Transformando Vidas de Crianças com TEA",
+    excerpt:
+      "Descubra como o Genoxidil está revolucionando o tratamento natural do autismo através de tecnologia molecular avançada e resultados científicos comprovados.",
+    category: "Ciência",
+    date: "2025-01-11",
+    readTime: 15,
+    image: "/lovable-uploads/21db05fe-3f45-4994-ba7e-d3e83e450994.png",
+    slug: "/genoxidil-autismo",
+  },
+  {
+    id: 2,
     title: "Genoxidil e Nrf2: avanços na saúde celular",
     excerpt:
       "Como a ativação da proteína Nrf2 pode apoiar longevidade, energia e defesa antioxidante.",
@@ -17,7 +28,7 @@ const basePosts = [
     image: "/lovable-uploads/529f578b-3241-4eb4-a569-8b921817b603.png",
   },
   {
-    id: 2,
+    id: 3,
     title: "Antioxidantes endógenos: o que são e como estimular",
     excerpt:
       "Entenda o papel dos antioxidantes produzidos pelo corpo na proteção contra radicais livres.",
@@ -175,7 +186,7 @@ const Blog = () => {
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {postsToRender.map((post) => (
               <article key={post.id} className="group overflow-hidden rounded-xl border border-border bg-card text-card-foreground hover:shadow-lg transition-shadow animate-fade-in">
-                <a href={`/blog/${post.id}`} className="block">
+                <a href={post.slug || `/blog/${post.id}`} className="block">
                   <div className="aspect-[16/10] overflow-hidden">
                     <img
                       src={post.image}
