@@ -18,6 +18,12 @@ import TermsOfUse from "./pages/TermsOfUse";
 import TransparencyPolicy from "./pages/TransparencyPolicy";
 import RefundPolicy from "./pages/RefundPolicy";
 import GenoxidilAutismo from "./pages/GenoxidilAutismo";
+import ProteinaNrf2 from "./pages/ProteinaNrf2";
+import EstresseOxidativo from "./pages/EstresseOxidativo";
+import AntioxidantesNaturais from "./pages/AntioxidantesNaturais";
+import SaudeCelular from "./pages/SaudeCelular";
+import VitaminasComplexoB from "./pages/VitaminasComplexoB";
+import DesintoxicacaoNatural from "./pages/DesintoxicacaoNatural";
 
 const queryClient = new QueryClient();
 
@@ -34,6 +40,12 @@ const App = () => (
               <Route path="/produtos" element={<Products />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="/genoxidil-autismo" element={<GenoxidilAutismo />} />
+              <Route path="/proteina-nrf2" element={<ProteinaNrf2 />} />
+              <Route path="/estresse-oxidativo" element={<EstresseOxidativo />} />
+              <Route path="/antioxidantes-naturais" element={<AntioxidantesNaturais />} />
+              <Route path="/saude-celular" element={<SaudeCelular />} />
+              <Route path="/vitaminas-complexo-b" element={<VitaminasComplexoB />} />
+              <Route path="/desintoxicacao-natural" element={<DesintoxicacaoNatural />} />
               <Route path="/faq" element={<FAQPage />} />
               <Route path="/contato" element={<ContactPage />} />
               <Route path="/politica-de-privacidade" element={<PrivacyPolicy />} />
