@@ -6,70 +6,81 @@ const BlogSection = () => {
   const blogPosts = [
     {
       id: 1,
-      title: 'O que é a Proteína Nrf2 e por que ela é fundamental para sua saúde?',
-      excerpt: 'Descubra como esta proteína regula os antioxidantes naturais do seu corpo e protege contra o envelhecimento celular.',
-      author: 'Dr. Pedro Oliveira',
+      title: 'Genoxidil para Autismo: A Ciência que Está Transformando Vidas de Crianças com TEA',
+      excerpt: 'Descubra como o Genoxidil está revolucionando o tratamento natural do autismo através de tecnologia molecular avançada e resultados científicos comprovados.',
+      author: 'NBN Living',
       date: '15 Jan 2024',
-      readTime: '5 min',
+      readTime: '12 min',
       category: 'Ciência',
       featured: true,
-      image: '/lovable-uploads/899d038e-e71e-4dd8-869e-f8ae2b9a45dd.png',
-      slug: 'proteina-nrf2-fundamental-saude'
+      image: '/lovable-uploads/21db05fe-3f45-4994-ba7e-d3e83e450994.png',
+      slug: 'genoxidil-autismo'
     },
     {
       id: 2,
-      title: 'Estresse Oxidativo: Como Proteger Suas Células dos Radicais Livres',
-      excerpt: 'Descubra como o estresse oxidativo acelera o envelhecimento e aprenda estratégias cientificamente comprovadas para combater radicais livres.',
-      author: 'Dra. Ana Silva',
+      title: 'Proteína Nrf2: O Guardião Antioxidante que Revoluciona sua Saúde Celular',
+      excerpt: 'Descubra como a proteína Nrf2 ativa mais de 250 genes antioxidantes, protege contra estresse oxidativo e promove longevidade celular.',
+      author: 'Dr. Pedro Oliveira',
       date: '12 Jan 2024',
-      readTime: '7 min',
-      category: 'Saúde',
-      image: '/lovable-uploads/95fc8720-74f6-47b0-8e51-8afd359da6cc.png',
-      slug: 'estresse-oxidativo-inimigo-silencioso-saude'
+      readTime: '10 min',
+      category: 'Ciência',
+      image: '/lovable-uploads/899d038e-e71e-4dd8-869e-f8ae2b9a45dd.png',
+      slug: 'proteina-nrf2'
     },
     {
       id: 3,
-      title: 'Antioxidantes Naturais vs Sintéticos: Por Que a Natureza Vence',
-      excerpt: 'Descubra a superioridade científica dos antioxidantes naturais como Astaxantina e Trans-resveratrol para sua saúde celular.',
-      author: 'Dr. Carlos Mendes',
+      title: 'Estresse Oxidativo: Como Proteger Suas Células dos Radicais Livres',
+      excerpt: 'Descubra como o estresse oxidativo acelera o envelhecimento e aprenda estratégias cientificamente comprovadas para combater radicais livres.',
+      author: 'Dra. Ana Silva',
       date: '10 Jan 2024',
-      readTime: '6 min',
-      category: 'Nutrição',
-      image: '/lovable-uploads/8c7dac5e-b7e0-49c0-8b4c-46b4f50a1026.png',
-      slug: 'antioxidantes-naturais-superioridade-cientifica'
+      readTime: '8 min',
+      category: 'Saúde',
+      image: '/lovable-uploads/95fc8720-74f6-47b0-8e51-8afd359da6cc.png',
+      slug: 'estresse-oxidativo'
     },
     {
       id: 4,
-      title: 'Saúde Celular: O Segredo da Longevidade',
-      excerpt: 'Como manter suas células saudáveis e funcionais por mais tempo através da nutrição adequada.',
-      author: 'Dra. Maria Santos',
+      title: 'Antioxidantes Naturais vs Sintéticos: Por Que a Natureza Vence',
+      excerpt: 'Descubra a superioridade científica dos antioxidantes naturais e como eles oferecem biodisponibilidade superior e benefícios únicos.',
+      author: 'Dr. Carlos Mendes',
       date: '8 Jan 2024',
-      readTime: '8 min',
-      category: 'Longevidade',
-      image: '/lovable-uploads/21493484-bf1c-499c-b124-dd49850909b3.png',
-      slug: 'saude-celular-segredo-longevidade'
+      readTime: '9 min',
+      category: 'Nutrição',
+      image: '/lovable-uploads/23ffa2e1-bab1-4682-b7d1-37bf5dd4186c.png',
+      slug: 'antioxidantes-naturais'
     },
     {
       id: 5,
-      title: 'Vitaminas do Complexo B: Energia para Suas Células',
-      excerpt: 'A importância das vitaminas B1, B2, B3, B5, B6, B7, B9 e B12 no metabolismo celular e produção de energia.',
-      author: 'Dr. Ricardo Costa',
-      date: '5 Jan 2024',
-      readTime: '4 min',
-      category: 'Vitaminas',
-      image: '/lovable-uploads/742f2448-5081-4e5b-8d45-a2c1aa4332a6.png',
-      slug: 'vitaminas-complexo-b-energia-celulas'
+      title: 'Saúde Celular: O Segredo da Longevidade',
+      excerpt: 'Como manter suas células saudáveis é a chave para longevidade, energia e prevenção de doenças relacionadas ao envelhecimento.',
+      author: 'Dra. Maria Santos',
+      date: '6 Jan 2024',
+      readTime: '11 min',
+      category: 'Longevidade',
+      image: '/lovable-uploads/744bea02-712f-4edc-a49e-3b0708006424.png',
+      slug: 'saude-celular'
     },
     {
       id: 6,
+      title: 'Vitaminas do Complexo B: Energia para Suas Células',
+      excerpt: 'A importância das 8 vitaminas do complexo B no metabolismo celular, produção de energia e função neurológica otimizada.',
+      author: 'Dr. Ricardo Costa',
+      date: '4 Jan 2024',
+      readTime: '7 min',
+      category: 'Vitaminas',
+      image: '/lovable-uploads/742f2448-5081-4e5b-8d45-a2c1aa4332a6.png',
+      slug: 'vitaminas-complexo-b'
+    },
+    {
+      id: 7,
       title: 'Desintoxicação Natural: Como Seu Corpo se Limpa',
-      excerpt: 'Os mecanismos naturais de desintoxicação do organismo e como otimizá-los através da suplementação.',
+      excerpt: 'Os mecanismos naturais de desintoxicação do organismo e como otimizá-los para melhor saúde celular e eliminação de toxinas.',
       author: 'Dra. Lucia Fernandes',
-      date: '3 Jan 2024',
+      date: '2 Jan 2024',
       readTime: '6 min',
       category: 'Detox',
-      image: '/lovable-uploads/564ec4b2-8f99-4ca1-90e8-ea872d0a9e89.png',
-      slug: 'desintoxicacao-natural-corpo-limpa'
+      image: '/lovable-uploads/6b195fff-dab1-45f0-bf34-232664f3ebf2.png',
+      slug: 'desintoxicacao-natural'
     }
   ];
 
@@ -136,7 +147,7 @@ const BlogSection = () => {
                     </div>
                   </div>
                   <Link 
-                    to={`/blog/${post.slug}`}
+                    to={`/${post.slug}`}
                     className="bg-accent text-accent-foreground px-6 py-3 rounded-lg font-medium hover:bg-accent/90 transition-all flex items-center inline-flex"
                   >
                     Ler Artigo Completo
@@ -201,7 +212,7 @@ const BlogSection = () => {
                   </div>
                   
                   <Link 
-                    to={`/blog/${post.slug}`}
+                    to={`/${post.slug}`}
                     className="text-accent font-medium text-sm hover:text-accent/80 transition-colors flex items-center"
                   >
                     Ler mais
