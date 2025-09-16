@@ -172,27 +172,28 @@ const BlogSection = () => {
           {blogPosts
             .filter(post => !post.featured)
             .map((post) => (
-              <article key={post.id} className="bg-gray-50 rounded-2xl overflow-hidden hover:shadow-lg transition-shadow group">
-                <div className="relative h-48 overflow-hidden">
-                  <img 
-                    src={post.image} 
-                    alt={post.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                  <div className="absolute top-4 left-4">
-                    <span className="bg-accent text-accent-foreground px-3 py-1 rounded-full text-sm font-medium">
-                      {post.category}
-                    </span>
+              <Link to={`/${post.slug}`} key={post.id}>
+                <article className="bg-gray-50 rounded-2xl overflow-hidden hover:shadow-lg transition-shadow group cursor-pointer">
+                  <div className="relative h-48 overflow-hidden">
+                    <img 
+                      src={post.image} 
+                      alt={post.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="absolute top-4 left-4">
+                      <span className="bg-accent text-accent-foreground px-3 py-1 rounded-full text-sm font-medium">
+                        {post.category}
+                      </span>
+                    </div>
                   </div>
-                </div>
-                
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-accent transition-colors line-clamp-2">
-                    {post.title}
-                  </h3>
-                  <p className="text-gray-600 mb-4 leading-relaxed text-sm line-clamp-3">
-                    {post.excerpt}
-                  </p>
+                  
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-accent transition-colors line-clamp-2">
+                      {post.title}
+                    </h3>
+                    <p className="text-gray-600 mb-4 leading-relaxed text-sm line-clamp-3">
+                      {post.excerpt}
+                    </p>
                   
                   <div className="flex items-center justify-between text-xs text-gray-500 mb-4">
                     <div className="flex items-center">
@@ -211,15 +212,13 @@ const BlogSection = () => {
                     </div>
                   </div>
                   
-                  <Link 
-                    to={`/${post.slug}`}
-                    className="text-accent font-medium text-sm hover:text-accent/80 transition-colors flex items-center"
-                  >
+                  <span className="text-accent font-medium text-sm flex items-center">
                     Ler mais
                     <ArrowRight className="ml-1 w-3 h-3" />
-                  </Link>
-                </div>
-              </article>
+                  </span>
+                  </div>
+                </article>
+              </Link>
             ))}
         </div>
 

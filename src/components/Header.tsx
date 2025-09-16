@@ -20,7 +20,9 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
-            <img src="/lovable-uploads/f75280e0-b24e-4a95-be18-a24ef4c360d2.png" alt="Genoxidil" className="h-12 w-auto" />
+            <a href="/">
+              <img src="/lovable-uploads/f75280e0-b24e-4a95-be18-a24ef4c360d2.png" alt="Genoxidil" className="h-12 w-auto cursor-pointer hover:opacity-80 transition-opacity" />
+            </a>
           </div>
 
           {/* Desktop Menu */}

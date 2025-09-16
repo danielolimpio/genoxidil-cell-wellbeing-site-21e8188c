@@ -51,11 +51,11 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-blue-400" />
-                <span className="text-gray-300">0800 123 4567</span>
+                <span className="text-gray-300">(12) 98251-9116</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-orange-400" />
-                <span className="text-gray-300">contato@genoxidil.com.br</span>
+                <span className="text-gray-300">contato@genoxidil.blog</span>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-5 h-5 text-blue-400" />
@@ -190,7 +190,7 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-center md:text-left">
               <p className="text-gray-400">
-                © 2024 Genoxidil by NBN Living. Todos os direitos reservados.
+                © 2025 <a href="https://nbnliving.news/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">Genoxidil by NBN Living</a> | Todos os direitos reservados | Desenvolvido por <a href="https://danielolimpio.com/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">Daniel Olimpio</a>
               </p>
               <p className="text-xs text-gray-500 mt-1">
                 Este produto não se destina a diagnosticar, tratar, curar ou prevenir qualquer doença.

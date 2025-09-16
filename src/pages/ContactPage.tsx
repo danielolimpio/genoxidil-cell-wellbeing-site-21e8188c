@@ -85,8 +85,8 @@ const ContactPage = () => {
             <h2 className="text-xl font-bold">SAC - Serviço de Atendimento ao Consumidor</h2>
             <p className="text-muted-foreground">Registre solicitações de troca, reembolso ou reclamações.</p>
             <div className="mt-4 flex flex-wrap gap-3">
-              <a href="mailto:contato@genoxidil.com.br" className="rounded-md border border-border bg-background px-4 py-2 hover:bg-accent hover:text-accent-foreground transition-colors">E-mail</a>
-              <a href="tel:08001234567" className="rounded-md border border-border bg-background px-4 py-2 hover:bg-accent hover:text-accent-foreground transition-colors">0800 123 4567</a>
+              <a href="mailto:contato@genoxidil.blog" className="rounded-md border border-border bg-background px-4 py-2 hover:bg-accent hover:text-accent-foreground transition-colors">E-mail</a>
+              <a href="tel:12982519116" className="rounded-md border border-border bg-background px-4 py-2 hover:bg-accent hover:text-accent-foreground transition-colors">(12) 98251-9116</a>
               <a href="/politica-de-reembolso" className="rounded-md bg-primary text-primary-foreground px-4 py-2 hover:bg-primary/90">Política de Reembolso</a>
             </div>
           </div>

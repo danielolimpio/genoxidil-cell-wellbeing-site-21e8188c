@@ -37,7 +37,7 @@ const PrivacyPolicy = () => {
             <h2>Segurança</h2>
             <p>Adotamos medidas técnicas e organizacionais para proteger suas informações contra acessos não autorizados.</p>
             <h2>Contato do Encarregado (DPO)</h2>
-            <p>contato@genoxidil.com.br</p>
+            <p>contato@genoxidil.blog</p>
           </article>
         </section>
       </main>

@@ -28,7 +28,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-foreground mb-1">Telefone</h4>
-                    <p className="text-muted-foreground">0800 123 4567</p>
+                    <p className="text-muted-foreground">(12) 98251-9116</p>
                     <p className="text-sm text-muted-foreground/70">Ligação gratuita</p>
                   </div>
                 </div>
@@ -39,7 +39,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-foreground mb-1">WhatsApp</h4>
-                    <p className="text-muted-foreground">(11) 99999-9999</p>
+                    <p className="text-muted-foreground">(12) 98251-9116</p>
                     <p className="text-sm text-muted-foreground/70">Atendimento via chat</p>
                   </div>
                 </div>
@@ -50,7 +50,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-foreground mb-1">E-mail</h4>
-                    <p className="text-muted-foreground">contato@genoxidil.com.br</p>
+                    <p className="text-muted-foreground">contato@genoxidil.blog</p>
                     <p className="text-sm text-muted-foreground/70">Resposta em até 24h</p>
                   </div>
                 </div>
@@ -118,7 +118,7 @@ const Contact = () => {
                   <input
                     type="tel"
                     className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="(11) 99999-9999"
+                    placeholder="(12) 98251-9116"
                   />
                 </div>
                 <div>
