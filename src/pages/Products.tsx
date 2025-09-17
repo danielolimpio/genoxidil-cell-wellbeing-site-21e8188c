@@ -179,10 +179,19 @@ const Products = () => {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="text-lg px-8 py-6">
+                <Button 
+                  size="lg" 
+                  className="text-lg px-8 py-6"
+                  onClick={() => window.open('https://store.nbnliving.com/danielmoreira', '_blank')}
+                >
                   COMPRE AGORA
                 </Button>
-                <Button variant="outline" size="lg" className="text-lg px-8 py-6">
+                <Button 
+                  variant="outline" 
+                  size="lg" 
+                  className="text-lg px-8 py-6"
+                  onClick={() => window.open('https://wa.me/5512982519116?text=Olá,%20Gostaria%20de%20saber%20mais%20sobre%20o%20Genoxidil', '_blank')}
+                >
                   Falar com Especialista
                 </Button>
               </div>
@@ -350,11 +359,19 @@ const Products = () => {
                     </p>
                   </div>
                   
-                  <Button className="w-full" size="lg">
+                  <Button 
+                    className="w-full" 
+                    size="lg"
+                    onClick={() => window.open('https://store.nbnliving.com/danielmoreira', '_blank')}
+                  >
                     COMPRE AGORA
                   </Button>
                   
-                  <Button variant="outline" className="w-full">
+                  <Button 
+                    variant="outline" 
+                    className="w-full"
+                    onClick={() => window.open('https://wa.me/5512982519116?text=Olá,%20Gostaria%20de%20saber%20mais%20sobre%20o%20Genoxidil', '_blank')}
+                  >
                     Falar com Especialista
                   </Button>
                 </CardContent>
@@ -446,10 +463,20 @@ const Products = () => {
             Junte-se a milhares de pessoas que já descobriram o poder da regeneração celular
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" variant="secondary" className="text-lg px-8 py-6">
+            <Button 
+              size="lg" 
+              variant="secondary" 
+              className="text-lg px-8 py-6"
+              onClick={() => window.open('https://store.nbnliving.com/danielmoreira', '_blank')}
+            >
               COMPRE AGORA COM DESCONTO
             </Button>
-            <Button size="lg" variant="outline" className="text-lg px-8 py-6 border-white hover:bg-white text-orange-600">
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="text-lg px-8 py-6 border-white hover:bg-white text-orange-600"
+              onClick={() => window.open('https://wa.me/5512982519116?text=Olá,%20Gostaria%20de%20saber%20mais%20sobre%20o%20Genoxidil', '_blank')}
+            >
               Falar com Especialista
             </Button>
           </div>

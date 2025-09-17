@@ -39,6 +39,7 @@ const Hero = () => {
                 variant="secondary"
                 size="lg" 
                 className="text-lg px-8 py-3"
+                onClick={() => window.open('https://store.nbnliving.com/danielmoreira', '_blank')}
               >
                 Comprar Agora
                 <ChevronRight className="ml-2 w-5 h-5" />

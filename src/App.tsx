@@ -24,6 +24,7 @@ import AntioxidantesNaturais from "./pages/AntioxidantesNaturais";
 import SaudeCelular from "./pages/SaudeCelular";
 import VitaminasComplexoB from "./pages/VitaminasComplexoB";
 import DesintoxicacaoNatural from "./pages/DesintoxicacaoNatural";
+import Afiliado from "./pages/Afiliado";
 
 const queryClient = new QueryClient();
 
@@ -46,6 +47,7 @@ const App = () => (
               <Route path="/saude-celular" element={<SaudeCelular />} />
               <Route path="/vitaminas-complexo-b" element={<VitaminasComplexoB />} />
               <Route path="/desintoxicacao-natural" element={<DesintoxicacaoNatural />} />
+              <Route path="/afiliado" element={<Afiliado />} />
               <Route path="/faq" element={<FAQPage />} />
               <Route path="/contato" element={<ContactPage />} />
               <Route path="/politica-de-privacidade" element={<PrivacyPolicy />} />

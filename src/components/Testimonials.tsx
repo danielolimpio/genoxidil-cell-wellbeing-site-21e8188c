@@ -155,7 +155,10 @@ const Testimonials = () => {
             Experimente o Genoxidil e sinta a diferença que a ativação da proteína Nrf2 
             pode fazer em sua vida. Garantia de 30 dias ou seu dinheiro de volta.
           </p>
-          <button className="bg-secondary text-secondary-foreground px-8 py-3 rounded-lg font-semibold hover:bg-secondary/90 transition-all">
+          <button 
+            className="bg-secondary text-secondary-foreground px-8 py-3 rounded-lg font-semibold hover:bg-secondary/90 transition-all"
+            onClick={() => window.open('https://store.nbnliving.com/danielmoreira', '_blank')}
+          >
             Experimente Agora
           </button>
         </div>

@@ -139,7 +139,10 @@ const FeaturedVideos = () => {
               Inscreva-se no nosso canal para receber conteúdo exclusivo sobre saúde celular, 
               pesquisas científicas e dicas de bem-estar.
             </p>
-            <button className="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+            <button 
+              className="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              onClick={() => window.open('https://www.youtube.com/@genoxidiloficial', '_blank')}
+            >
               Inscrever-se no Canal
             </button>
           </div>

@@ -28,7 +28,14 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-foreground mb-1">Telefone</h4>
-                    <p className="text-muted-foreground">(12) 98251-9116</p>
+                     <a 
+                      href="https://wa.me/5512982519116?text=Olá,%20Gostaria%20de%20saber%20mais%20sobre%20o%20Genoxidil" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-muted-foreground hover:text-primary transition-colors"
+                    >
+                      (12) 98251-9116
+                    </a>
                     <p className="text-sm text-muted-foreground/70">Ligação gratuita</p>
                   </div>
                 </div>
@@ -180,7 +187,11 @@ const Contact = () => {
             <p className="text-muted-foreground mb-4">
               Fale diretamente com nossos especialistas para esclarecimentos imediatos.
             </p>
-            <Button variant="outline" className="border-primary text-primary hover:bg-primary/10">
+            <Button 
+              variant="outline" 
+              className="border-primary text-primary hover:bg-primary/10"
+              onClick={() => window.open('https://wa.me/5512982519116?text=Olá,%20Gostaria%20de%20saber%20mais%20sobre%20o%20Genoxidil', '_blank')}
+            >
               Ligar Agora
             </Button>
           </div>
@@ -193,7 +204,11 @@ const Contact = () => {
             <p className="text-muted-foreground mb-4">
               Converse conosco via WhatsApp para respostas rápidas e personalizadas.
             </p>
-            <Button variant="outline" className="border-secondary text-secondary hover:bg-secondary/10">
+            <Button 
+              variant="outline" 
+              className="border-secondary text-secondary hover:bg-secondary/10"
+              onClick={() => window.open('https://wa.me/5512982519116?text=Olá,%20Gostaria%20de%20saber%20mais%20sobre%20o%20Genoxidil', '_blank')}
+            >
               Abrir Chat
             </Button>
           </div>
@@ -206,7 +221,11 @@ const Contact = () => {
             <p className="text-muted-foreground mb-4">
               Agende uma consulta gratuita com nossos nutricionistas especializados.
             </p>
-            <Button variant="outline" className="border-accent text-accent hover:bg-accent/10">
+            <Button 
+              variant="outline" 
+              className="border-accent text-accent hover:bg-accent/10"
+              onClick={() => window.open('https://wa.me/5512982519116?text=Olá,%20Gostaria%20de%20saber%20mais%20sobre%20o%20Genoxidil', '_blank')}
+            >
               Agendar
             </Button>
           </div>

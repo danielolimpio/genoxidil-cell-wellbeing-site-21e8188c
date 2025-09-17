@@ -12,6 +12,7 @@ const Header = () => {
     { name: 'Produtos', href: '/produtos' },
     { name: 'Blog', href: '/blog' },
     { name: 'FAQ', href: '/faq' },
+    { name: 'Afiliado', href: '/afiliado' },
     { name: 'Contato', href: '/contato' },
   ];
 
@@ -36,7 +37,10 @@ const Header = () => {
                 {item.name}
               </a>
             ))}
-            <Button variant="secondary">
+            <Button 
+              variant="secondary"
+              onClick={() => window.open('https://store.nbnliving.com/danielmoreira', '_blank')}
+            >
               Comprar Agora
             </Button>
           </nav>
@@ -64,7 +68,11 @@ const Header = () => {
                   {item.name}
                 </a>
               ))}
-              <Button variant="secondary" className="mt-4">
+              <Button 
+                variant="secondary" 
+                className="mt-4"
+                onClick={() => window.open('https://store.nbnliving.com/danielmoreira', '_blank')}
+              >
                 Comprar Agora
               </Button>
             </div>

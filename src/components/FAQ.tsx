@@ -157,7 +157,10 @@ const FAQ = () => {
               sobre o Genoxidil e seus benefícios.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-secondary text-secondary-foreground px-6 py-3 rounded-lg font-semibold hover:bg-secondary/90 transition-all">
+              <button 
+                className="bg-secondary text-secondary-foreground px-6 py-3 rounded-lg font-semibold hover:bg-secondary/90 transition-all"
+                onClick={() => window.open('https://wa.me/5512982519116?text=Olá,%20Gostaria%20de%20saber%20mais%20sobre%20o%20Genoxidil', '_blank')}
+              >
                 Falar com Especialista
               </button>
               <button className="border border-primary text-primary px-6 py-3 rounded-lg font-semibold hover:bg-primary/10 transition-colors">
