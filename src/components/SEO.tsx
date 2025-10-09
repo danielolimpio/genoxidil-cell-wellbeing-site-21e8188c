@@ -24,7 +24,8 @@ const SEO = ({ title, description, canonical, image, jsonLd, robots, keywords }:
             content={Array.isArray(keywords) ? keywords.join(", ") : keywords}
           />
         )}
-        {robots && <meta name="robots" content={robots} />}
+        <meta name="robots" content={robots || "index, follow"} />
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
         {canonical && <link rel="canonical" href={canonical} />}
 
         {/* Open Graph */}

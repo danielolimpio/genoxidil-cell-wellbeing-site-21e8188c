@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useMemo, useState } from "react";
 import { Clock, Tag, User, Bookmark, Filter } from "lucide-react";
 
 // Simple mock data for posts
@@ -101,40 +101,15 @@ const generatePosts = (count = 36): Post[] => {
 };
 
 const Blog = () => {
-  const allPosts = useMemo(() => generatePosts(60), []);
+  const allPosts = useMemo(() => basePosts, []);
   const [activeCategory, setActiveCategory] = useState<Category>("Todos");
-  const [visible, setVisible] = useState(12);
-  const [loading, setLoading] = useState(false);
-  const sentinelRef = useRef<HTMLDivElement | null>(null);
 
   const filtered = useMemo(() => {
     if (activeCategory === "Todos") return allPosts;
     return allPosts.filter((p) => p.category === activeCategory);
   }, [activeCategory, allPosts]);
 
-  useEffect(() => {
-    setVisible(12);
-  }, [activeCategory]);
-
-  useEffect(() => {
-    const el = sentinelRef.current;
-    if (!el) return;
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting && !loading) {
-          setLoading(true);
-          setTimeout(() => {
-            setVisible((v) => Math.min(v + 12, filtered.length));
-            setLoading(false);
-          }, 400);
-        }
-      });
-    }, { rootMargin: "200px" });
-    io.observe(el);
-    return () => io.disconnect();
-  }, [filtered.length, loading]);
-
-  const postsToRender = filtered.slice(0, visible);
+  const postsToRender = filtered;
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -222,26 +197,6 @@ const Blog = () => {
               </article>
             ))}
           </div>
-
-          {/* Sentinel */}
-          <div ref={sentinelRef} className="h-10" />
-
-          {/* Loader */}
-          {loading && (
-            <div className="py-8 text-center text-muted-foreground">Carregando…</div>
-          )}
-
-          {/* Fallback button */}
-          {visible < filtered.length && !loading && (
-            <div className="py-8 text-center">
-              <button
-                className="rounded-md border border-border bg-background px-4 py-2 hover:bg-accent hover:text-accent-foreground transition-colors"
-                onClick={() => setVisible((v) => Math.min(v + 12, filtered.length))}
-              >
-                Carregar mais
-              </button>
-            </div>
-          )}
         </section>
       </main>
 

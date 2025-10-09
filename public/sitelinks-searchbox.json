@@ -1,0 +1,46 @@
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Genoxidil",
+  "url": "https://genoxidil.blog/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://genoxidil.blog/blog?q={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  },
+  "hasPart": [
+    {
+      "@type": "WebPage",
+      "name": "Sobre Genoxidil",
+      "url": "https://genoxidil.blog/sobre"
+    },
+    {
+      "@type": "WebPage",
+      "name": "Produtos",
+      "url": "https://genoxidil.blog/produtos"
+    },
+    {
+      "@type": "WebPage",
+      "name": "Blog",
+      "url": "https://genoxidil.blog/blog"
+    },
+    {
+      "@type": "WebPage",
+      "name": "FAQ - Perguntas Frequentes",
+      "url": "https://genoxidil.blog/faq"
+    },
+    {
+      "@type": "WebPage",
+      "name": "Programa de Afiliados",
+      "url": "https://genoxidil.blog/afiliado"
+    },
+    {
+      "@type": "WebPage",
+      "name": "Contato",
+      "url": "https://genoxidil.blog/contato"
+    }
+  ]
+}

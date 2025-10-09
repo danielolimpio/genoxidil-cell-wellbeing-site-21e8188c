@@ -14,6 +14,7 @@
     
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
     <title>Genoxidil - Suplemento Nrf2 | NBN Living</title>
     <meta name="description" content="Genoxidil - O primeiro suplemento que ativa a proteína Nrf2 para saúde celular, antioxidantes naturais e bem-estar. Tecnologia científica avançada." />
     <meta name="author" content="NBN Living" />
@@ -42,7 +43,15 @@
         "@context":"https://schema.org",
         "@type":"WebSite",
         "name":"Genoxidil",
-        "url":"https://genoxidil.blog/"
+        "url":"https://genoxidil.blog/",
+        "potentialAction":{
+          "@type":"SearchAction",
+          "target":{
+            "@type":"EntryPoint",
+            "urlTemplate":"https://genoxidil.blog/blog?q={search_term_string}"
+          },
+          "query-input":"required name=search_term_string"
+        }
       }
     </script>
   </head>
