@@ -308,7 +308,7 @@ const CookiesPolicy = () => {
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-background p-6 rounded-lg">
                   <h4 className="font-bold text-primary mb-3">📧 E-mail</h4>
-                  <p className="text-foreground font-semibold">genoxidil@gmail.com</p>
+                  <p className="text-foreground font-semibold">contato@genoxidil.blog</p>
                   <p className="text-sm text-muted-foreground mt-2">Resposta em até 24 horas</p>
                 </div>
                 

@@ -314,7 +314,7 @@ const TermsOfUse = () => {
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-background p-6 rounded-lg">
                   <h4 className="font-bold text-primary mb-3">📧 E-mail</h4>
-                  <p className="text-foreground font-semibold">genoxidil@gmail.com</p>
+                  <p className="text-foreground font-semibold">contato@genoxidil.blog</p>
                 </div>
                 
                 <div className="bg-background p-6 rounded-lg">

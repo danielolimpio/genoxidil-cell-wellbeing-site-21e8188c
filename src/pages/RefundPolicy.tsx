@@ -304,7 +304,7 @@ const RefundPolicy = () => {
               <div className="grid md:grid-cols-3 gap-6">
                 <div className="bg-background p-6 rounded-lg">
                   <h4 className="font-bold text-primary mb-3">📧 E-mail</h4>
-                  <p className="text-foreground font-semibold mb-1">genoxidil@gmail.com</p>
+                  <p className="text-foreground font-semibold mb-1">contato@genoxidil.blog</p>
                   <p className="text-xs text-muted-foreground">Resposta em até 24h</p>
                 </div>
                 

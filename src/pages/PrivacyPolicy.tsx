@@ -267,7 +267,7 @@ const PrivacyPolicy = () => {
               <div className="mt-6 p-6 bg-indigo-100 dark:bg-indigo-900/20 rounded-lg">
                 <h4 className="font-bold text-foreground mb-3">📬 Como exercer seus direitos:</h4>
                 <p className="text-sm text-muted-foreground mb-2">
-                  Entre em contato através do e-mail: <strong className="text-indigo-600 dark:text-indigo-400">genoxidil@gmail.com</strong>
+                  Entre em contato através do e-mail: <strong className="text-indigo-600 dark:text-indigo-400">contato@genoxidil.blog</strong>
                 </p>
                 <p className="text-sm text-muted-foreground">
                   Ou pelo WhatsApp: <strong className="text-indigo-600 dark:text-indigo-400">(12) 98251-9116</strong>
@@ -407,7 +407,7 @@ const PrivacyPolicy = () => {
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-background p-6 rounded-lg">
                   <h4 className="font-bold text-primary mb-3">📧 E-mail</h4>
-                  <p className="text-foreground font-semibold">genoxidil@gmail.com</p>
+                  <p className="text-foreground font-semibold">contato@genoxidil.blog</p>
                   <p className="text-sm text-muted-foreground mt-2">Resposta em até 48 horas úteis</p>
                 </div>
                 
