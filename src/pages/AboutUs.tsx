@@ -4,9 +4,34 @@ import Footer from '@/components/Footer';
 import SEO from "@/components/SEO";
 
 const AboutUs = () => {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "Sobre a NBN Living - Genoxidil Brasil",
+    "description": "Conheça a NBN Living, empresa com 30 anos de experiência em suplementação e saúde celular, presente em 75 países",
+    "url": "https://genoxidil.blog/sobre"
+  };
+
   return (
-    <div className="min-h-screen bg-background">
-      <Header />
+    <>
+      <SEO
+        title="Sobre a NBN Living - Genoxidil Brasil | 30 Anos de Excelência"
+        description="Conheça a NBN Living: empresa mexicana com 30 anos de experiência em suplementação e saúde celular, presente em 75 países. Tecnologia avançada para qualidade de vida."
+        canonical="https://genoxidil.blog/sobre"
+        image="https://genoxidil.blog/genoxidil-logo.png"
+        keywords={[
+          "NBN Living Brasil",
+          "sobre genoxidil",
+          "empresa NBN Living",
+          "laboratórios herbolaris",
+          "xi farma",
+          "suplementação natural"
+        ]}
+        jsonLd={jsonLd}
+      />
+      
+      <div className="min-h-screen bg-background">
+        <Header />
       
       {/* Hero Section */}
       <section className="pt-24 pb-16 bg-gradient-to-br from-primary/10 to-secondary/10">
@@ -222,8 +247,9 @@ const AboutUs = () => {
         </div>
       </section>
 
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </>
   );
 };
 

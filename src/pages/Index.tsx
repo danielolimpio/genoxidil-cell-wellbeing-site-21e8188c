@@ -9,22 +9,81 @@ import BlogSection from '@/components/BlogSection';
 import FAQ from '@/components/FAQ';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
-
+import SEO from '@/components/SEO';
 
 const Index = () => {
+  const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Genoxidil Brasil - NBN Living",
+      "description": "Suplemento de regeneração celular e ativação da proteína Nrf2 para longevidade e saúde celular",
+      "url": "https://genoxidil.blog",
+      "logo": "https://genoxidil.blog/genoxidil-logo.png",
+      "sameAs": [
+        "https://www.youtube.com/@genoxidiloficial",
+        "https://nbnliving.news/"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+55-12-98251-9116",
+        "contactType": "Customer Service",
+        "availableLanguage": "Portuguese"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "Genoxidil",
+      "description": "Suplemento de regeneração celular com nanotecnologia, ativa a proteína Nrf2 e combate 1 milhão de radicais livres por segundo",
+      "brand": {
+        "@type": "Brand",
+        "name": "NBN Living"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://store.nbnliving.com/danielmoreira",
+        "priceCurrency": "BRL",
+        "availability": "https://schema.org/InStock"
+      }
+    }
+  ];
+
   return (
-    <div className="min-h-screen bg-white">
-      <Header />
-      <Hero />
-      <Benefits />
-      <Ingredients />
-      <FeaturedVideos />
-      <Testimonials />
-      <BlogSection />
-      <FAQ />
-      <Contact />
-      <Footer />
-    </div>
+    <>
+      <SEO
+        title="Genoxidil - Suplemento de Regeneração Celular | Ative a Proteína Nrf2"
+        description="Genoxidil: suplemento de regeneração celular que ativa a proteína Nrf2, combate 1 milhão de radicais livres por segundo e promove longevidade celular. NBN Living Brasil."
+        canonical="https://genoxidil.blog/"
+        image="https://genoxidil.blog/genoxidil-logo.png"
+        keywords={[
+          "genoxidil",
+          "proteína nrf2",
+          "regeneração celular",
+          "antioxidantes naturais",
+          "estresse oxidativo",
+          "longevidade celular",
+          "NBN Living",
+          "saúde celular",
+          "suplemento natural",
+          "genoxidil brasil"
+        ]}
+        jsonLd={jsonLd}
+      />
+      
+      <div className="min-h-screen bg-white">
+        <Header />
+        <Hero />
+        <Benefits />
+        <Ingredients />
+        <FeaturedVideos />
+        <Testimonials />
+        <BlogSection />
+        <FAQ />
+        <Contact />
+        <Footer />
+      </div>
+    </>
   );
 };
 
