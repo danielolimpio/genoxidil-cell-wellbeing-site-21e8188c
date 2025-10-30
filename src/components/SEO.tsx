@@ -5,12 +5,28 @@ export type SEOProps = {
   description: string;
   canonical?: string;
   image?: string;
+  imageAlt?: string;
+  imageWidth?: string;
+  imageHeight?: string;
+  siteName?: string;
   jsonLd?: object | object[];
   robots?: string;
   keywords?: string | string[];
 };
 
-const SEO = ({ title, description, canonical, image, jsonLd, robots, keywords }: SEOProps) => {
+const SEO = ({ 
+  title, 
+  description, 
+  canonical, 
+  image = "https://genoxidil.blog/genoxidil.jpg",
+  imageAlt = "Como Funciona o Genoxidil: Proteína Nrf2, Antioxidantes Naturais e Saúde Celular",
+  imageWidth = "1200",
+  imageHeight = "630",
+  siteName = "Genoxidil",
+  jsonLd, 
+  robots, 
+  keywords 
+}: SEOProps) => {
   const jsonArray = Array.isArray(jsonLd) ? jsonLd : jsonLd ? [jsonLd] : [];
 
   return (
@@ -28,18 +44,23 @@ const SEO = ({ title, description, canonical, image, jsonLd, robots, keywords }:
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
         {canonical && <link rel="canonical" href={canonical} />}
 
-        {/* Open Graph */}
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        {image && <meta property="og:image" content={image} />}        
+        {/* Open Graph / Facebook / WhatsApp */}
         <meta property="og:type" content="website" />
         {canonical && <meta property="og:url" content={canonical} />}
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={image} />
+        <meta property="og:image:alt" content={imageAlt} />
+        <meta property="og:image:width" content={imageWidth} />
+        <meta property="og:image:height" content={imageHeight} />
+        <meta property="og:site_name" content={siteName} />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
-        {image && <meta name="twitter:image" content={image} />}
+        <meta name="twitter:image" content={image} />
+        <meta name="twitter:image:alt" content={imageAlt} />
       </Helmet>
 
       {jsonArray.map((data, idx) => (

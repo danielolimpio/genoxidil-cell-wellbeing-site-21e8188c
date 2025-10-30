@@ -52,10 +52,10 @@ const Index = () => {
   return (
     <>
       <SEO
-        title="Genoxidil - Suplemento de Regeneração Celular | Ative a Proteína Nrf2"
-        description="Genoxidil: suplemento de regeneração celular que ativa a proteína Nrf2, combate 1 milhão de radicais livres por segundo e promove longevidade celular. NBN Living Brasil."
+        title="Genoxidil – Saúde Celular e Longevidade com Nrf2"
+        description="Descubra como o Genoxidil ativa a proteína Nrf2, combate o estresse oxidativo e promove saúde celular naturalmente."
         canonical="https://genoxidil.blog/"
-        image="https://genoxidil.blog/genoxidil-logo.png"
+        image="https://genoxidil.blog/genoxidil.jpg"
         keywords={[
           "genoxidil",
           "proteína nrf2",
