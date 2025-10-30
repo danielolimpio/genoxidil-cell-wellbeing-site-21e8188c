@@ -1,4 +1,6 @@
 import SEO from '@/components/SEO';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { ChevronRight, Users, TrendingUp, DollarSign, Award, Phone, MessageCircle } from 'lucide-react';
 
@@ -19,6 +21,8 @@ const Afiliado = () => {
         keywords="afiliado genoxidil, programa afiliados, comissões nbn living, renda extra, marketing multinível"
         canonical="/afiliado"
       />
+      
+      <Header />
       
       <div className="min-h-screen">
         {/* Hero Section */}
@@ -401,6 +405,8 @@ const Afiliado = () => {
           </div>
         </main>
       </div>
+      
+      <Footer />
     </>
   );
 };

@@ -48,6 +48,7 @@ const Hero = () => {
                 variant="outline" 
                 size="lg" 
                 className="border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground text-lg px-8 py-3"
+                onClick={() => window.location.href = '/produtos'}
               >
                 Saiba Mais
               </Button>
