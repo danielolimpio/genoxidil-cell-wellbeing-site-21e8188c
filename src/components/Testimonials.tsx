@@ -3,7 +3,7 @@ import { Star, Quote, Play, CheckCircle, X } from 'lucide-react';
 import { useState } from 'react';
 
 const Testimonials = () => {
-  const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
+  const [selectedVideo, setSelectedVideo] = useState<{ url: string; type: 'youtube' | 'local' } | null>(null);
 
   const getYouTubeVideoId = (url: string) => {
     const regex = /(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([^&\n?#]+)/;
@@ -55,10 +55,11 @@ const Testimonials = () => {
     },
     {
       id: 3,
-      name: 'Lúcia Fernandes',
+      name: 'Sandra',
       role: 'Aposentada',
       thumbnail: 'Depoimento em vídeo',
-      duration: '2:58'
+      duration: '15:20',
+      videoUrl: 'https://youtu.be/xVPtUkTp-rU'
     }
   ];
 
@@ -122,9 +123,13 @@ const Testimonials = () => {
                     className="relative z-10 w-12 h-12 bg-card rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform"
                     onClick={() => {
                       if (video.videoUrl) {
-                        const videoId = getYouTubeVideoId(video.videoUrl);
-                        if (videoId) {
-                          setSelectedVideo(videoId);
+                        if (video.videoUrl.startsWith('/')) {
+                          setSelectedVideo({ url: video.videoUrl, type: 'local' });
+                        } else {
+                          const videoId = getYouTubeVideoId(video.videoUrl);
+                          if (videoId) {
+                            setSelectedVideo({ url: videoId, type: 'youtube' });
+                          }
                         }
                       }
                     }}
@@ -177,14 +182,25 @@ const Testimonials = () => {
                 </button>
               </div>
               <div className="relative w-full" style={{ paddingBottom: '56.25%' /* 16:9 aspect ratio */ }}>
-                <iframe
-                  src={`https://www.youtube.com/embed/${selectedVideo}?autoplay=1&rel=0`}
-                  title="YouTube video player"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                  className="absolute top-0 left-0 w-full h-full"
-                ></iframe>
+                {selectedVideo.type === 'youtube' ? (
+                  <iframe
+                    src={`https://www.youtube.com/embed/${selectedVideo.url}?autoplay=1&rel=0`}
+                    title="YouTube video player"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                    className="absolute top-0 left-0 w-full h-full"
+                  ></iframe>
+                ) : (
+                  <video
+                    src={selectedVideo.url}
+                    controls
+                    autoPlay
+                    className="absolute top-0 left-0 w-full h-full"
+                  >
+                    Seu navegador não suporta a reprodução de vídeos.
+                  </video>
+                )}
               </div>
             </div>
           </div>
