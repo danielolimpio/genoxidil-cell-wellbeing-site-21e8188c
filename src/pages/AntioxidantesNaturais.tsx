@@ -80,6 +80,30 @@ const AntioxidantesNaturais = () => {
           </div>
         </section>
 
+        {/* Video Section */}
+        <section className="px-4 py-16 bg-muted/20">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                Maneiras de Tomar o Genoxidil para Potencializar seus Resultados
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Ative o poder do Genoxidil com a via antioxidante NRF2 e potencialize a saúde das suas células!
+              </p>
+            </div>
+            <div className="relative w-full aspect-video rounded-lg overflow-hidden shadow-2xl">
+              <video 
+                controls 
+                className="w-full h-full"
+                poster="/lovable-uploads/744bea02-712f-4edc-a49e-3b0708006424.png"
+              >
+                <source src="/videos/genoxidil-como-tomar.mp4" type="video/mp4" />
+                Seu navegador não suporta a reprodução de vídeos.
+              </video>
+            </div>
+          </div>
+        </section>
+
         {/* Main Content */}
         <section className="px-4 py-16">
           <article className="max-w-4xl mx-auto prose prose-lg dark:prose-invert prose-headings:text-foreground prose-p:text-muted-foreground prose-strong:text-foreground prose-li:text-muted-foreground">
