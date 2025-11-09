@@ -3,7 +3,7 @@ import { Play, Award, Users, TrendingUp, X } from 'lucide-react';
 import { useState } from 'react';
 
 const FeaturedVideos = () => {
-  const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
+  const [selectedVideo, setSelectedVideo] = useState<{ url: string; type: 'youtube' | 'local' } | null>(null);
 
   const getYouTubeVideoId = (url: string) => {
     const regex = /(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([^&\n?#]+)/;
@@ -37,12 +37,12 @@ const FeaturedVideos = () => {
     },
     {
       id: 3,
-      title: 'Antioxidantes Naturais vs Sintéticos',
-      description: 'A diferença entre antioxidantes naturais e sintéticos e por que isso importa para sua saúde.',
+      title: 'Maneiras de Tomar o Genoxidil para Potencializar seus Resultados',
+      description: 'Ative o poder do Genoxidil com a via antioxidante NRF2 e potencialize a saúde das suas células!',
       duration: '15:20',
       views: '76K',
       category: 'Educação',
-      videoUrl: 'https://youtu.be/xVPtUkTp-rU'
+      videoUrl: '/videos/genoxidil-como-tomar.mp4'
     }
   ];
 
@@ -63,7 +63,7 @@ const FeaturedVideos = () => {
           {videos.map((video) => (
             <div key={video.id} className="bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow group">
               <div className="relative h-48 overflow-hidden">
-                {video.videoUrl ? (
+                {video.videoUrl && !video.videoUrl.startsWith('/') ? (
                   <img 
                     src={getYouTubeThumbnail(video.videoUrl) || ''} 
                     alt={video.title}
@@ -74,16 +74,22 @@ const FeaturedVideos = () => {
                     }}
                   />
                 ) : (
-                  <div className="bg-muted h-full flex items-center justify-center" />
+                  <div className="bg-gradient-to-br from-primary/20 to-secondary/20 h-full flex items-center justify-center">
+                    <Play className="w-16 h-16 text-primary/40" />
+                  </div>
                 )}
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors" />
                 <button 
                   className="absolute inset-0 flex items-center justify-center"
                   onClick={() => {
                     if (video.videoUrl) {
-                      const videoId = getYouTubeVideoId(video.videoUrl);
-                      if (videoId) {
-                        setSelectedVideo(videoId);
+                      if (video.videoUrl.startsWith('/')) {
+                        setSelectedVideo({ url: video.videoUrl, type: 'local' });
+                      } else {
+                        const videoId = getYouTubeVideoId(video.videoUrl);
+                        if (videoId) {
+                          setSelectedVideo({ url: videoId, type: 'youtube' });
+                        }
                       }
                     }
                   }}
@@ -162,14 +168,25 @@ const FeaturedVideos = () => {
                 </button>
               </div>
               <div className="relative w-full" style={{ paddingBottom: '56.25%' /* 16:9 aspect ratio */ }}>
-                <iframe
-                  src={`https://www.youtube.com/embed/${selectedVideo}?autoplay=1&rel=0`}
-                  title="YouTube video player"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                  className="absolute top-0 left-0 w-full h-full"
-                ></iframe>
+                {selectedVideo.type === 'youtube' ? (
+                  <iframe
+                    src={`https://www.youtube.com/embed/${selectedVideo.url}?autoplay=1&rel=0`}
+                    title="YouTube video player"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                    className="absolute top-0 left-0 w-full h-full"
+                  ></iframe>
+                ) : (
+                  <video
+                    src={selectedVideo.url}
+                    controls
+                    autoPlay
+                    className="absolute top-0 left-0 w-full h-full"
+                  >
+                    Seu navegador não suporta a reprodução de vídeos.
+                  </video>
+                )}
               </div>
             </div>
           </div>
