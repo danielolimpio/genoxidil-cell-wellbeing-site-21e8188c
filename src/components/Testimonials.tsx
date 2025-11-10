@@ -49,7 +49,7 @@ const Testimonials = () => {
       role: 'Terapeuta',
       thumbnail: 'Depoimento em vídeo',
       duration: '2:45',
-      videoUrl: 'https://www.youtube.com/watch?v=t-2XPZGhNTQ'
+      videoUrl: '/videos/ana-isabel-depoimento.mp4'
     },
     {
       id: 2,
@@ -64,7 +64,7 @@ const Testimonials = () => {
       role: 'Aposentada',
       thumbnail: 'Depoimento em vídeo',
       duration: '15:20',
-      videoUrl: 'https://www.youtube.com/watch?v=xVPtUkTp-rU'
+      videoUrl: '/videos/sandra-depoimento.mp4'
     }
   ];
 
