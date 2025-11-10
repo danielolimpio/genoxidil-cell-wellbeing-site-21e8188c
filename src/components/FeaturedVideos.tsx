@@ -75,7 +75,7 @@ const FeaturedVideos = () => {
                   />
                 ) : video.id === 3 ? (
                   <img 
-                    src="/thumbnails/genoxidil-como-tomar-thumb.jpg" 
+                    src="/thumbnails/maneiras-tomar-genoxidil-thumb.jpg" 
                     alt={video.title}
                     className="w-full h-full object-cover"
                   />

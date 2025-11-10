@@ -49,7 +49,7 @@ const Testimonials = () => {
       role: 'Terapeuta',
       thumbnail: 'Depoimento em vídeo',
       duration: '2:45',
-      videoUrl: 'https://youtu.be/t-2XPZGhNTQ'
+      videoUrl: 'https://www.youtube.com/watch?v=t-2XPZGhNTQ'
     },
     {
       id: 2,
@@ -64,7 +64,7 @@ const Testimonials = () => {
       role: 'Aposentada',
       thumbnail: 'Depoimento em vídeo',
       duration: '15:20',
-      videoUrl: 'https://youtu.be/xVPtUkTp-rU'
+      videoUrl: 'https://www.youtube.com/watch?v=xVPtUkTp-rU'
     }
   ];
 
@@ -123,10 +123,16 @@ const Testimonials = () => {
           <div className="grid md:grid-cols-3 gap-8">
             {videoTestimonials.map((video) => (
               <div key={video.id} className="bg-card rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow group">
-                <div className="relative h-40 overflow-hidden">
-                  {video.id === 3 ? (
+                <div className="relative h-48 overflow-hidden">
+                  {video.id === 1 ? (
                     <img 
-                      src="/thumbnails/sandra-depoimento-thumb.jpg" 
+                      src="/thumbnails/ana-isabel-thumb.jpg" 
+                      alt={`Depoimento de ${video.name}`}
+                      className="w-full h-full object-cover"
+                    />
+                  ) : video.id === 3 ? (
+                    <img 
+                      src="/thumbnails/sandra-depoimento-thumb-alt.jpg" 
                       alt={`Depoimento de ${video.name}`}
                       className="w-full h-full object-cover"
                     />
@@ -145,7 +151,7 @@ const Testimonials = () => {
                   )}
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors" />
                   <button
-                    className="relative z-10 w-12 h-12 bg-card rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform"
+                    className="absolute inset-0 flex items-center justify-center z-10"
                     onClick={() => {
                       if (video.videoUrl) {
                         if (video.videoUrl.startsWith('/')) {
@@ -159,9 +165,11 @@ const Testimonials = () => {
                       }
                     }}
                   >
-                    <Play className="w-5 h-5 text-primary ml-0.5" />
+                    <div className="w-14 h-14 bg-card rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                      <Play className="w-6 h-6 text-primary ml-0.5" />
+                    </div>
                   </button>
-                  <div className="absolute bottom-4 left-4 bg-secondary text-secondary-foreground px-2 py-1 rounded text-sm">
+                  <div className="absolute bottom-4 left-4 bg-secondary text-secondary-foreground px-2 py-1 rounded text-sm z-20">
                     {video.duration}
                   </div>
                 </div>
