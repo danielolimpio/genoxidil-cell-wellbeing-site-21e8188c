@@ -157,10 +157,8 @@ const Testimonials = () => {
                         if (video.videoUrl.startsWith('/')) {
                           setSelectedVideo({ url: video.videoUrl, type: 'local' });
                         } else {
-                          const videoId = getYouTubeVideoId(video.videoUrl);
-                          if (videoId) {
-                            setSelectedVideo({ url: videoId, type: 'youtube' });
-                          }
+                          // Abre vídeos do YouTube diretamente em nova aba
+                          window.open(video.videoUrl, '_blank');
                         }
                       }
                     }}
