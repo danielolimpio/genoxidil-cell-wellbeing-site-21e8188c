@@ -73,6 +73,12 @@ const FeaturedVideos = () => {
                       e.currentTarget.parentElement!.classList.add('bg-muted', 'flex', 'items-center', 'justify-center');
                     }}
                   />
+                ) : video.id === 3 ? (
+                  <img 
+                    src="/thumbnails/genoxidil-como-tomar-thumb.jpg" 
+                    alt={video.title}
+                    className="w-full h-full object-cover"
+                  />
                 ) : (
                   <div className="bg-gradient-to-br from-primary/20 to-secondary/20 h-full flex items-center justify-center">
                     <Play className="w-16 h-16 text-primary/40" />

@@ -10,6 +10,11 @@ const Testimonials = () => {
     const match = url.match(regex);
     return match ? match[1] : null;
   };
+
+  const getYouTubeThumbnail = (url: string) => {
+    const videoId = getYouTubeVideoId(url);
+    return videoId ? `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg` : null;
+  };
   const testimonials = [
     {
       id: 1,
@@ -118,8 +123,28 @@ const Testimonials = () => {
           <div className="grid md:grid-cols-3 gap-8">
             {videoTestimonials.map((video) => (
               <div key={video.id} className="bg-card rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow group">
-                <div className="relative bg-primary h-40 flex items-center justify-center">
-                  <button 
+                <div className="relative h-40 overflow-hidden">
+                  {video.id === 3 ? (
+                    <img 
+                      src="/thumbnails/sandra-depoimento-thumb.jpg" 
+                      alt={`Depoimento de ${video.name}`}
+                      className="w-full h-full object-cover"
+                    />
+                  ) : video.videoUrl && !video.videoUrl.startsWith('/') ? (
+                    <img 
+                      src={getYouTubeThumbnail(video.videoUrl) || ''} 
+                      alt={`Depoimento de ${video.name}`}
+                      className="w-full h-full object-cover"
+                      onError={(e) => {
+                        e.currentTarget.style.display = 'none';
+                        e.currentTarget.parentElement!.classList.add('bg-primary');
+                      }}
+                    />
+                  ) : (
+                    <div className="bg-primary h-full" />
+                  )}
+                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors" />
+                  <button
                     className="relative z-10 w-12 h-12 bg-card rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform"
                     onClick={() => {
                       if (video.videoUrl) {
