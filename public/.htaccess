@@ -3,16 +3,26 @@ RewriteEngine On
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
+# Redirect www to non-www (canonical URL)
+RewriteCond %{HTTP_HOST} ^www\.genoxidil\.blog$ [NC]
+RewriteRule ^(.*)$ https://genoxidil.blog/$1 [L,R=301]
+
 # Handle React Router (SPA)
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
   
-  # Se não for arquivo nem diretório, redireciona para index.html
+  # Exclude static files from SPA redirect
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_URI} !\.(?:ico|css|js|json|xml|txt|png|jpg|jpeg|gif|svg|webp|woff|woff2|ttf|eot|mp4|mp3|pdf)$ [NC]
   RewriteRule . /index.html [L]
 </IfModule>
+
+# Serve static files directly (ads.txt, robots.txt, sitemap.xml, etc.)
+<FilesMatch "\.(txt|xml|json|ico)$">
+  RewriteEngine Off
+</FilesMatch>
 
 # Enable compression
 <IfModule mod_deflate.c>
@@ -27,9 +37,13 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
   ExpiresByType image/gif "access plus 1 year"
   ExpiresByType image/png "access plus 1 year"
   ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
   ExpiresByType text/css "access plus 1 month"
   ExpiresByType application/javascript "access plus 1 month"
   ExpiresByType text/javascript "access plus 1 month"
+  ExpiresByType text/plain "access plus 1 week"
+  ExpiresByType text/xml "access plus 1 week"
+  ExpiresByType application/json "access plus 1 week"
 </IfModule>
 
 # Security Headers

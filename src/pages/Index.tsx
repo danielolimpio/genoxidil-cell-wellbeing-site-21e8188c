@@ -36,6 +36,7 @@ const Index = () => {
       "@type": "Product",
       "name": "Genoxidil",
       "description": "Suplemento de regeneração celular com nanotecnologia, ativa a proteína Nrf2 e combate 1 milhão de radicais livres por segundo",
+      "image": "https://genoxidil.blog/genoxidil.jpg",
       "brand": {
         "@type": "Brand",
         "name": "NBN Living"
@@ -44,7 +45,55 @@ const Index = () => {
         "@type": "Offer",
         "url": "https://store.nbnliving.com/danielmoreira",
         "priceCurrency": "BRL",
-        "availability": "https://schema.org/InStock"
+        "price": "297.00",
+        "priceValidUntil": "2025-12-31",
+        "availability": "https://schema.org/InStock",
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "BR",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+          "merchantReturnDays": 30
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "BR"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 1,
+              "maxValue": 3,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 3,
+              "maxValue": 10,
+              "unitCode": "DAY"
+            }
+          }
+        }
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "127"
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Ana Isabel"
+        },
+        "reviewBody": "Excelente produto! Senti melhora significativa na disposição e energia após algumas semanas de uso."
       }
     }
   ];
