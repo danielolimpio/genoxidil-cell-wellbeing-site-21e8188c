@@ -7,6 +7,26 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 RewriteCond %{HTTP_HOST} ^www\.genoxidil\.blog$ [NC]
 RewriteRule ^(.*)$ https://genoxidil.blog/$1 [L,R=301]
 
+# 301 Redirects for old/common URLs that generate 404s
+RewriteRule ^home/?$ / [L,R=301]
+RewriteRule ^index\.html$ / [L,R=301]
+RewriteRule ^index\.php$ / [L,R=301]
+RewriteRule ^about/?$ /sobre [L,R=301]
+RewriteRule ^contact/?$ /contato [L,R=301]
+RewriteRule ^products/?$ /produtos [L,R=301]
+RewriteRule ^product/?$ /produtos [L,R=301]
+RewriteRule ^faq-page/?$ /faq [L,R=301]
+RewriteRule ^privacy/?$ /politica-de-privacidade [L,R=301]
+RewriteRule ^privacy-policy/?$ /politica-de-privacidade [L,R=301]
+RewriteRule ^terms/?$ /termos-de-uso [L,R=301]
+RewriteRule ^terms-of-service/?$ /termos-de-uso [L,R=301]
+RewriteRule ^cookies/?$ /politica-de-cookies [L,R=301]
+RewriteRule ^refund/?$ /politica-de-reembolso [L,R=301]
+RewriteRule ^affiliate/?$ /afiliado [L,R=301]
+RewriteRule ^nrf2/?$ /proteina-nrf2 [L,R=301]
+RewriteRule ^autismo/?$ /genoxidil-autismo [L,R=301]
+RewriteRule ^autism/?$ /genoxidil-autismo [L,R=301]
+
 # Handle React Router (SPA)
 <IfModule mod_rewrite.c>
   RewriteEngine On
