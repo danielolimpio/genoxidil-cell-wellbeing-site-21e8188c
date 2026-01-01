@@ -98,7 +98,7 @@ const Sitemap = () => {
       />
       <Header />
       
-      <main className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+      <main className="min-h-screen bg-gradient-to-b from-gray-50 to-white pt-20">
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-900 via-blue-800 to-blue-900 text-white py-16">
           <div className="container mx-auto px-4">
