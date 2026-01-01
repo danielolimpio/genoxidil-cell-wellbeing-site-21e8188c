@@ -25,6 +25,7 @@ import SaudeCelular from "./pages/SaudeCelular";
 import VitaminasComplexoB from "./pages/VitaminasComplexoB";
 import DesintoxicacaoNatural from "./pages/DesintoxicacaoNatural";
 import Afiliado from "./pages/Afiliado";
+import Sitemap from "./pages/Sitemap";
 
 const queryClient = new QueryClient();
 
@@ -55,6 +56,7 @@ const App = () => (
               <Route path="/termos-de-uso" element={<TermsOfUse />} />
               <Route path="/politica-de-transparencia" element={<TransparencyPolicy />} />
               <Route path="/politica-de-reembolso" element={<RefundPolicy />} />
+              <Route path="/sitemap" element={<Sitemap />} />
               <Route path="/blog/:slug" element={<BlogPost />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />

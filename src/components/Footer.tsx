@@ -16,7 +16,8 @@ const Footer = () => {
       { name: 'Política de Cookies', href: '/politica-de-cookies' },
       { name: 'Termos de Uso', href: '/termos-de-uso' },
       { name: 'Política de Transparência', href: '/politica-de-transparencia' },
-      { name: 'Política de Reembolso', href: '/politica-de-reembolso' }
+      { name: 'Política de Reembolso', href: '/politica-de-reembolso' },
+      { name: 'Sitemap', href: '/sitemap' }
     ],
     business: [
       { name: 'Promoções', href: '/#promocoes' },
