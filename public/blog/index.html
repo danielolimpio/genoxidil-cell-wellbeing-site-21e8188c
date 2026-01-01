@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1JJHFLPE2Y"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-1JJHFLPE2Y');
+    </script>
+    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+    
+    <title>Blog Genoxidil - Artigos sobre Saúde Celular e Nrf2</title>
+    <meta name="description" content="Artigos científicos sobre saúde celular, proteína Nrf2, antioxidantes e suplementação. Descubra como cuidar da sua saúde de forma natural." />
+    <meta name="author" content="NBN Living" />
+    <meta name="keywords" content="blog genoxidil, saúde celular, proteína nrf2, antioxidantes, suplementação natural, bem-estar" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://genoxidil.blog/blog/" />
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png" />
+    <link rel="shortcut icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
+
+    <meta property="og:title" content="Blog Genoxidil - Artigos sobre Saúde Celular e Nrf2" />
+    <meta property="og:description" content="Artigos científicos sobre saúde celular, proteína Nrf2 e antioxidantes." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://genoxidil.blog/blog/" />
+    <meta property="og:image" content="https://genoxidil.blog/genoxidil.jpg" />
+    <meta property="og:site_name" content="Genoxidil" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@genoxidil" />
+    <meta name="twitter:title" content="Blog Genoxidil - Artigos sobre Saúde Celular" />
+    <meta name="twitter:description" content="Artigos científicos sobre saúde celular e proteína Nrf2." />
+    <meta name="twitter:image" content="https://genoxidil.blog/genoxidil.jpg" />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "Blog Genoxidil",
+      "description": "Artigos científicos sobre saúde celular, proteína Nrf2, antioxidantes e suplementação natural",
+      "url": "https://genoxidil.blog/blog/",
+      "publisher": {
+        "@type": "Organization",
+        "name": "NBN Living",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://genoxidil.blog/genoxidil-logo.png"
+        }
+      }
+    }
+    </script>
+    
+    <link rel="stylesheet" href="/static-styles.css" />
+    <style>
+      .blog-card {
+        background: white;
+        border-radius: 1rem;
+        overflow: hidden;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.2s, transform 0.2s;
+      }
+      .blog-card:hover {
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        transform: translateY(-4px);
+      }
+      .blog-card img {
+        width: 100%;
+        height: 12rem;
+        object-fit: cover;
+      }
+      .blog-card-content {
+        padding: 1.5rem;
+      }
+      .blog-category {
+        display: inline-block;
+        background: hsl(var(--accent));
+        color: white;
+        padding: 0.25rem 0.75rem;
+        border-radius: 9999px;
+        font-size: 0.75rem;
+        font-weight: 500;
+      }
+      .blog-title {
+        font-size: 1.25rem;
+        font-weight: 700;
+        margin: 0.75rem 0;
+        color: hsl(var(--foreground));
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+      .blog-excerpt {
+        color: hsl(var(--muted-foreground));
+        font-size: 0.875rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        margin-bottom: 1rem;
+      }
+      .blog-meta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.75rem;
+        color: #6b7280;
+        margin-bottom: 0.75rem;
+      }
+      .read-more {
+        color: hsl(var(--accent));
+        font-weight: 500;
+        font-size: 0.875rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.25rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="header-content">
+          <a href="/" class="header-logo">
+            <img src="/lovable-uploads/f75280e0-b24e-4a95-be18-a24ef4c360d2.png" alt="Genoxidil" />
+          </a>
+          
+          <nav class="header-nav">
+            <a href="/">Home</a>
+            <a href="/sobre/">Sobre</a>
+            <a href="/produtos/">Produtos</a>
+            <a href="/blog/">Blog</a>
+            <a href="/faq/">FAQ</a>
+            <a href="/afiliado/">Afiliado</a>
+            <a href="/contato/">Contato</a>
+            <a href="https://store.nbnliving.com/danielmoreira" target="_blank" class="btn btn-secondary">Comprar Agora</a>
+          </nav>
+          
+          <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+        
+        <nav class="mobile-nav" id="mobileNav">
+          <a href="/">Home</a>
+          <a href="/sobre/">Sobre</a>
+          <a href="/produtos/">Produtos</a>
+          <a href="/blog/">Blog</a>
+          <a href="/faq/">FAQ</a>
+          <a href="/afiliado/">Afiliado</a>
+          <a href="/contato/">Contato</a>
+          <a href="https://store.nbnliving.com/danielmoreira" target="_blank" class="btn btn-secondary mt-4">Comprar Agora</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="py-20 bg-gradient-hero" style="padding-top: 8rem;">
+        <div class="container">
+          <div class="section-title">
+            <h1>Blog <span class="text-secondary">Científico</span></h1>
+            <p>
+              Artigos científicos e educacionais sobre saúde celular, antioxidantes, 
+              e os mais recentes avanços em suplementação nutricional.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured Article -->
+      <section class="py-12 bg-white">
+        <div class="container">
+          <div class="card card-lg" style="background: linear-gradient(to right, hsl(var(--accent) / 0.1), hsl(var(--accent) / 0.05));">
+            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; align-items: center;">
+              <div>
+                <div class="flex items-center gap-4 mb-4">
+                  <span class="blog-category">Destaque</span>
+                  <span class="text-accent font-medium">Ciência</span>
+                </div>
+                <h2 class="text-3xl font-bold mb-4">Genoxidil para Autismo: A Ciência que Está Transformando Vidas de Crianças com TEA</h2>
+                <p class="text-muted mb-6 leading-relaxed">
+                  Descubra como o Genoxidil está revolucionando o tratamento natural do autismo através de tecnologia molecular avançada e resultados científicos comprovados.
+                </p>
+                <div class="flex items-center justify-between mb-6 text-sm text-gray-500">
+                  <span>NBN Living</span>
+                  <div class="flex gap-4">
+                    <span>15 Jan 2024</span>
+                    <span>12 min</span>
+                  </div>
+                </div>
+                <a href="/genoxidil-autismo/" class="btn btn-accent">
+                  Ler Artigo Completo
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-left: 0.5rem;">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+              </div>
+              <div class="card" style="padding: 2rem;">
+                <img src="/lovable-uploads/21db05fe-3f45-4994-ba7e-d3e83e450994.png" alt="Genoxidil para Autismo" style="width: 100%; height: auto; border-radius: 0.5rem;" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Blog Posts Grid -->
+      <section class="py-12 bg-muted">
+        <div class="container">
+          <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+            
+            <!-- Post 1 -->
+            <a href="/proteina-nrf2/" class="blog-card">
+              <img src="/lovable-uploads/899d038e-e71e-4dd8-869e-f8ae2b9a45dd.png" alt="Proteína Nrf2" />
+              <div class="blog-card-content">
+                <span class="blog-category">Ciência</span>
+                <h3 class="blog-title">Proteína Nrf2: O Guardião Antioxidante que Revoluciona sua Saúde Celular</h3>
+                <p class="blog-excerpt">
+                  Descubra como a proteína Nrf2 ativa mais de 250 genes antioxidantes, protege contra estresse oxidativo e promove longevidade celular.
+                </p>
+                <div class="blog-meta">
+                  <span>Dr. Pedro Oliveira</span>
+                  <span>10 min</span>
+                </div>
+                <span class="read-more">
+                  Ler mais
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </span>
+              </div>
+            </a>
+
+            <!-- Post 2 -->
+            <a href="/estresse-oxidativo/" class="blog-card">
+              <img src="/lovable-uploads/95fc8720-74f6-47b0-8e51-8afd359da6cc.png" alt="Estresse Oxidativo" />
+              <div class="blog-card-content">
+                <span class="blog-category">Saúde</span>
+                <h3 class="blog-title">Estresse Oxidativo: Como Proteger Suas Células dos Radicais Livres</h3>
+                <p class="blog-excerpt">
+                  Descubra como o estresse oxidativo acelera o envelhecimento e aprenda estratégias cientificamente comprovadas para combater radicais livres.
+                </p>
+                <div class="blog-meta">
+                  <span>Dra. Ana Silva</span>
+                  <span>8 min</span>
+                </div>
+                <span class="read-more">
+                  Ler mais
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </span>
+              </div>
+            </a>
+
+            <!-- Post 3 -->
+            <a href="/antioxidantes-naturais/" class="blog-card">
+              <img src="/lovable-uploads/23ffa2e1-bab1-4682-b7d1-37bf5dd4186c.png" alt="Antioxidantes Naturais" />
+              <div class="blog-card-content">
+                <span class="blog-category">Nutrição</span>
+                <h3 class="blog-title">Antioxidantes Naturais vs Sintéticos: Por Que a Natureza Vence</h3>
+                <p class="blog-excerpt">
+                  Descubra a superioridade científica dos antioxidantes naturais e como eles oferecem biodisponibilidade superior e benefícios únicos.
+                </p>
+                <div class="blog-meta">
+                  <span>Dr. Carlos Mendes</span>
+                  <span>9 min</span>
+                </div>
+                <span class="read-more">
+                  Ler mais
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </span>
+              </div>
+            </a>
+
+            <!-- Post 4 -->
+            <a href="/saude-celular/" class="blog-card">
+              <img src="/lovable-uploads/744bea02-712f-4edc-a49e-3b0708006424.png" alt="Saúde Celular" />
+              <div class="blog-card-content">
+                <span class="blog-category">Longevidade</span>
+                <h3 class="blog-title">Saúde Celular: O Segredo da Longevidade</h3>
+                <p class="blog-excerpt">
+                  Como manter suas células saudáveis é a chave para longevidade, energia e prevenção de doenças relacionadas ao envelhecimento.
+                </p>
+                <div class="blog-meta">
+                  <span>Dra. Maria Santos</span>
+                  <span>11 min</span>
+                </div>
+                <span class="read-more">
+                  Ler mais
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </span>
+              </div>
+            </a>
+
+            <!-- Post 5 -->
+            <a href="/vitaminas-complexo-b/" class="blog-card">
+              <img src="/lovable-uploads/742f2448-5081-4e5b-8d45-a2c1aa4332a6.png" alt="Vitaminas Complexo B" />
+              <div class="blog-card-content">
+                <span class="blog-category">Vitaminas</span>
+                <h3 class="blog-title">Vitaminas do Complexo B: Energia para Suas Células</h3>
+                <p class="blog-excerpt">
+                  A importância das 8 vitaminas do complexo B no metabolismo celular, produção de energia e função neurológica otimizada.
+                </p>
+                <div class="blog-meta">
+                  <span>Dr. Ricardo Costa</span>
+                  <span>7 min</span>
+                </div>
+                <span class="read-more">
+                  Ler mais
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </span>
+              </div>
+            </a>
+
+            <!-- Post 6 -->
+            <a href="/desintoxicacao-natural/" class="blog-card">
+              <img src="/lovable-uploads/6b195fff-dab1-45f0-bf34-232664f3ebf2.png" alt="Desintoxicação Natural" />
+              <div class="blog-card-content">
+                <span class="blog-category">Detox</span>
+                <h3 class="blog-title">Desintoxicação Natural: Como Seu Corpo se Limpa</h3>
+                <p class="blog-excerpt">
+                  Os mecanismos naturais de desintoxicação do organismo e como otimizá-los para melhor saúde celular e eliminação de toxinas.
+                </p>
+                <div class="blog-meta">
+                  <span>Dra. Lucia Fernandes</span>
+                  <span>6 min</span>
+                </div>
+                <span class="read-more">
+                  Ler mais
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </span>
+              </div>
+            </a>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Newsletter -->
+      <section class="py-16 bg-secondary" style="color: white;">
+        <div class="container text-center">
+          <h2 class="text-2xl font-bold mb-4">Mantenha-se Atualizado</h2>
+          <p style="opacity: 0.8; max-width: 42rem; margin: 0 auto 1.5rem;">
+            Receba os últimos artigos sobre saúde celular, pesquisas científicas e 
+            dicas de bem-estar diretamente em seu e-mail.
+          </p>
+          <div class="flex gap-4 justify-center flex-wrap" style="max-width: 28rem; margin: 0 auto;">
+            <input type="email" placeholder="Seu melhor e-mail" style="flex: 1; min-width: 200px; padding: 0.75rem 1rem; border-radius: 0.5rem; border: none;" />
+            <button class="btn btn-accent">Inscrever-se</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="space-y-6">
+            <img src="/lovable-uploads/d4a165cd-9ce8-43f7-a60b-7357dc4a444c.png" alt="Genoxidil" style="height: 3rem; width: auto;" />
+            <p class="text-gray-300 leading-relaxed">
+              O primeiro suplemento alimentar a ativar a proteína Nrf2, promovendo saúde celular 
+              e bem-estar através da ciência mais avançada.
+            </p>
+          </div>
+
+          <div>
+            <h3>Navegação</h3>
+            <ul class="footer-links">
+              <li><a href="/">Home</a></li>
+              <li><a href="/sobre/">Sobre</a></li>
+              <li><a href="/produtos/">Produtos</a></li>
+              <li><a href="/blog/">Blog</a></li>
+              <li><a href="/faq/">FAQ</a></li>
+              <li><a href="/contato/">Contato</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3>Legal & Políticas</h3>
+            <ul class="footer-links">
+              <li><a href="/politica-de-privacidade/">Política de Privacidade</a></li>
+              <li><a href="/politica-de-cookies/">Política de Cookies</a></li>
+              <li><a href="/termos-de-uso/">Termos de Uso</a></li>
+              <li><a href="/politica-de-transparencia/">Política de Transparência</a></li>
+              <li><a href="/politica-de-reembolso/">Política de Reembolso</a></li>
+              <li><a href="/sitemap/">Sitemap</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3>Oportunidades</h3>
+            <ul class="footer-links">
+              <li><a href="/afiliado/">Afiliados</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="container">
+          <p>
+            © 2025 <a href="https://nbnliving.news/" target="_blank" rel="noopener noreferrer">Genoxidil by NBN Living</a> | Todos os direitos reservados
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function toggleMobileMenu() {
+        var nav = document.getElementById('mobileNav');
+        nav.classList.toggle('active');
+      }
+    </script>
+  </body>
+</html>
