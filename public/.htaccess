@@ -7,40 +7,54 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 RewriteCond %{HTTP_HOST} ^www\.genoxidil\.blog$ [NC]
 RewriteRule ^(.*)$ https://genoxidil.blog/$1 [L,R=301]
 
+# Add trailing slash to directories (for static pages)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !(.*)/$
+RewriteCond %{REQUEST_URI} !\.(.*)$
+RewriteRule ^(.*)$ /$1/ [L,R=301]
+
 # 301 Redirects for old/common URLs that generate 404s
 RewriteRule ^home/?$ / [L,R=301]
 RewriteRule ^index\.html$ / [L,R=301]
 RewriteRule ^index\.php$ / [L,R=301]
-RewriteRule ^about/?$ /sobre [L,R=301]
-RewriteRule ^contact/?$ /contato [L,R=301]
-RewriteRule ^products/?$ /produtos [L,R=301]
-RewriteRule ^product/?$ /produtos [L,R=301]
-RewriteRule ^faq-page/?$ /faq [L,R=301]
-RewriteRule ^privacy/?$ /politica-de-privacidade [L,R=301]
-RewriteRule ^privacy-policy/?$ /politica-de-privacidade [L,R=301]
-RewriteRule ^terms/?$ /termos-de-uso [L,R=301]
-RewriteRule ^terms-of-service/?$ /termos-de-uso [L,R=301]
-RewriteRule ^cookies/?$ /politica-de-cookies [L,R=301]
-RewriteRule ^refund/?$ /politica-de-reembolso [L,R=301]
-RewriteRule ^affiliate/?$ /afiliado [L,R=301]
-RewriteRule ^nrf2/?$ /proteina-nrf2 [L,R=301]
-RewriteRule ^autismo/?$ /genoxidil-autismo [L,R=301]
-RewriteRule ^autism/?$ /genoxidil-autismo [L,R=301]
+RewriteRule ^about/?$ /sobre/ [L,R=301]
+RewriteRule ^contact/?$ /contato/ [L,R=301]
+RewriteRule ^products/?$ /produtos/ [L,R=301]
+RewriteRule ^product/?$ /produtos/ [L,R=301]
+RewriteRule ^faq-page/?$ /faq/ [L,R=301]
+RewriteRule ^privacy/?$ /politica-de-privacidade/ [L,R=301]
+RewriteRule ^privacy-policy/?$ /politica-de-privacidade/ [L,R=301]
+RewriteRule ^terms/?$ /termos-de-uso/ [L,R=301]
+RewriteRule ^terms-of-service/?$ /termos-de-uso/ [L,R=301]
+RewriteRule ^cookies/?$ /politica-de-cookies/ [L,R=301]
+RewriteRule ^refund/?$ /politica-de-reembolso/ [L,R=301]
+RewriteRule ^affiliate/?$ /afiliado/ [L,R=301]
+RewriteRule ^nrf2/?$ /proteina-nrf2/ [L,R=301]
+RewriteRule ^autismo/?$ /genoxidil-autismo/ [L,R=301]
+RewriteRule ^autism/?$ /genoxidil-autismo/ [L,R=301]
 
-# Handle React Router (SPA)
+# Serve index.html from directories (static pages)
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
   
-  # Exclude static files from SPA redirect
+  # If the request is for a directory with an index.html, serve it
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteCond %{REQUEST_FILENAME}/index.html -f
+  RewriteRule ^(.*)$ $1/index.html [L]
+  
+  # Exclude static files from any redirect
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{REQUEST_URI} !\.(?:ico|css|js|json|xml|txt|png|jpg|jpeg|gif|svg|webp|woff|woff2|ttf|eot|mp4|mp3|pdf)$ [NC]
+  
+  # For routes that don't have static HTML, fall back to main index.html (SPA)
+  # Only if a physical file/directory doesn't exist
   RewriteRule . /index.html [L]
 </IfModule>
 
 # Serve static files directly (ads.txt, robots.txt, sitemap.xml, etc.)
-<FilesMatch "\.(txt|xml|json|ico)$">
+<FilesMatch "\.(txt|xml|json|ico|css)$">
   RewriteEngine Off
 </FilesMatch>
 
