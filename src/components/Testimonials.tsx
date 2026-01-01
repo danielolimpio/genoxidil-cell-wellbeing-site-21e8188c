@@ -53,10 +53,11 @@ const Testimonials = () => {
     },
     {
       id: 2,
-      name: 'Roberto Lima',
-      role: 'Empresário',
+      name: 'Javier Chavez Valdivia',
+      role: 'Pai',
       thumbnail: 'Depoimento em vídeo',
-      duration: '3:12'
+      duration: '3:12',
+      videoUrl: '/videos/javier-depoimento.mp4'
     },
     {
       id: 3,
@@ -127,6 +128,12 @@ const Testimonials = () => {
                   {video.id === 1 ? (
                     <img 
                       src="/thumbnails/ana-isabel-thumb.jpg" 
+                      alt={`Depoimento de ${video.name}`}
+                      className="w-full h-full object-cover"
+                    />
+                  ) : video.id === 2 ? (
+                    <img 
+                      src="/thumbnails/javier-depoimento-thumb.jpg" 
                       alt={`Depoimento de ${video.name}`}
                       className="w-full h-full object-cover"
                     />
