@@ -167,7 +167,7 @@ const Sitemap = () => {
                   <ul className="space-y-2">
                     {allUrls.map((url, index) => (
                       <li key={index} className="flex items-start gap-2">
-                        <span className="text-gray-400 select-none">{index + 1}.</span>
+                        <span className="text-gray-600 select-none">{index + 1}.</span>
                         <a
                           href={url}
                           className="text-blue-600 hover:text-blue-800 hover:underline break-all"
