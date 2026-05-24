@@ -1,0 +1,32 @@
+# Genoxidil Brasil
+
+> Genoxidil é o primeiro suplemento de regeneração celular que ativa a proteína Nrf2, oferecendo antioxidantes naturais para longevidade, saúde celular e bem-estar. Desenvolvido pela NBN Living com tecnologia científica avançada.
+
+## Pages
+
+- [Home](/): Página inicial com apresentação do Genoxidil, benefícios, ingredientes, depoimentos e vídeos.
+- [Produtos](/produtos): Página de produtos com opções de compra, kits e informações sobre o suplemento Genoxidil.
+- [Sobre](/sobre): Conheça a história do Genoxidil, a ciência por trás da proteína Nrf2 e a missão da NBN Living.
+- [Blog](/blog): Artigos e conteúdos sobre saúde celular, antioxidantes naturais, Nrf2 e bem-estar.
+- [FAQ](/faq): Perguntas frequentes sobre o Genoxidil, uso, resultados e compra.
+- [Afiliado](/afiliado): Programa de afiliados e parceiros para divulgação do Genoxidil.
+- [Contato](/contato): Canais de atendimento ao cliente, suporte de afiliados e SAC.
+
+## Artigos
+
+- [Genoxidil e Autismo](/genoxidil-autismo): Como o Genoxidil pode auxiliar pessoas com autismo através da redução do estresse oxidativo.
+- [Proteína Nrf2](/proteina-nrf2): Entenda como a proteína Nrf2 funciona e sua importância para a saúde celular.
+- [Estresse Oxidativo](/estresse-oxidativo): O que é o estresse oxidativo, seus efeitos no organismo e como combatê-lo.
+- [Antioxidantes Naturais](/antioxidantes-naturais): Guia completo sobre antioxidantes naturais e seus benefícios para a saúde.
+- [Saúde Celular](/saude-celular): Como manter a saúde celular em dia e prevenir o envelhecimento precoce.
+- [Vitaminas do Complexo B](/vitaminas-complexo-b): Importância das vitaminas do complexo B para o metabolismo e energia.
+- [Desintoxicação Natural](/desintoxicacao-natural): Métodos naturais de desintoxicação do organismo para melhor qualidade de vida.
+
+## Optional
+
+- [Política de Privacidade](/politica-de-privacidade)
+- [Política de Cookies](/politica-de-cookies)
+- [Termos de Uso](/termos-de-uso)
+- [Política de Transparência](/politica-de-transparencia)
+- [Política de Reembolso](/politica-de-reembolso)
+- [Mapa do Site](/sitemap)
