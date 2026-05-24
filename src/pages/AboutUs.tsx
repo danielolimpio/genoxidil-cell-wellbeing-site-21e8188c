@@ -15,8 +15,8 @@ const AboutUs = () => {
   return (
     <>
       <SEO
-        title="Sobre a NBN Living - Genoxidil Brasil | 30 Anos de Excelência"
-        description="Conheça a NBN Living: empresa mexicana com 30 anos de experiência em suplementação e saúde celular, presente em 75 países. Tecnologia avançada para qualidade de vida."
+        title="Sobre a NBN Living | Genoxidil Brasil"
+        description="Conheça a NBN Living: 30 anos de experiência em saúde celular, presente em 75 países."
         canonical="https://genoxidil.blog/sobre"
         image="https://genoxidil.blog/genoxidil-logo.png"
         keywords={[
