@@ -27,7 +27,7 @@ const Header = () => {
                 alt="Genoxidil" 
                 width="150" 
                 height="48" 
-                fetchpriority="high"
+                fetchPriority="high"
                 className="h-12 w-auto cursor-pointer hover:opacity-80 transition-opacity" 
               />
             </a>
