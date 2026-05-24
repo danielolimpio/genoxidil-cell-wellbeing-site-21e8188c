@@ -10,6 +10,8 @@ const Ingredients = () => {
             <img 
               src="/lovable-uploads/2704316f-192a-4c7a-ab01-d4af129ec73d.png"
               alt="Genoxidil - Suplemento Alimentar"
+              width="512"
+              height="512"
               className="max-w-lg w-full h-auto rounded-2xl shadow-lg"
             />
           </div>

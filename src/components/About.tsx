@@ -76,6 +76,8 @@ const About = () => {
                 <img 
                   src="/lovable-uploads/6b195fff-dab1-45f0-bf34-232664f3ebf2.png" 
                   alt="Genoxidil Suplemento" 
+                  width="256"
+                  height="256"
                   className="w-64 h-64 object-contain"
                 />
               </div>

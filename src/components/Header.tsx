@@ -22,7 +22,14 @@ const Header = () => {
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
             <a href="/">
-              <img src="/lovable-uploads/f75280e0-b24e-4a95-be18-a24ef4c360d2.png" alt="Genoxidil" className="h-12 w-auto cursor-pointer hover:opacity-80 transition-opacity" />
+              <img 
+                src="/lovable-uploads/f75280e0-b24e-4a95-be18-a24ef4c360d2.png" 
+                alt="Genoxidil" 
+                width="150" 
+                height="48" 
+                fetchPriority="high"
+                className="h-12 w-auto cursor-pointer hover:opacity-80 transition-opacity" 
+              />
             </a>
           </div>
 
