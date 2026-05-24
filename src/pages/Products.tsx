@@ -157,7 +157,7 @@ const Products = () => {
         keywords={hiddenKeywords}
       />
       <Header />
-      
+      <main>
       {/* Hero Section */}
       <section className="pt-20 pb-16 bg-gradient-to-br from-primary/5 to-secondary/10">
         <div className="container mx-auto px-4">
@@ -482,7 +482,7 @@ const Products = () => {
           </div>
         </div>
       </section>
-
+      </main>
       <Footer />
     </div>;
 };

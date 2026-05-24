@@ -32,7 +32,7 @@ const AboutUs = () => {
       
       <div className="min-h-screen bg-background">
         <Header />
-      
+      <main>
       {/* Hero Section */}
       <section className="pt-24 pb-16 bg-gradient-to-br from-primary/10 to-secondary/10">
         <div className="container mx-auto px-4">
@@ -246,7 +246,7 @@ const AboutUs = () => {
           </div>
         </div>
       </section>
-
+      </main>
         <Footer />
       </div>
     </>
