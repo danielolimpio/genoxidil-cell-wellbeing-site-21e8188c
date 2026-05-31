@@ -7,10 +7,11 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 RewriteCond %{HTTP_HOST} ^www\.genoxidil\.blog$ [NC]
 RewriteRule ^(.*)$ https://genoxidil.blog/$1 [L,R=301]
 
-# Add trailing slash to directories (for static pages)
+# Add trailing slash ONLY when a physical directory exists (avoids redirect chains for SPA routes)
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_URI} !(.*)/$
 RewriteCond %{REQUEST_URI} !\.(.*)$
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -d
 RewriteRule ^(.*)$ /$1/ [L,R=301]
 
 # 301 Redirects for old/common URLs that generate 404s

@@ -9,7 +9,7 @@ const AboutUs = () => {
     "@type": "AboutPage",
     "name": "Sobre a NBN Living - Genoxidil Brasil",
     "description": "Conheça a NBN Living, empresa com 30 anos de experiência em suplementação e saúde celular, presente em 75 países",
-    "url": "https://genoxidil.blog/sobre"
+    "url": "https://genoxidil.blog/sobre/"
   };
 
   return (
@@ -17,7 +17,7 @@ const AboutUs = () => {
       <SEO
         title="Sobre a NBN Living | Genoxidil Brasil"
         description="Conheça a NBN Living: 30 anos de experiência em saúde celular, presente em 75 países."
-        canonical="https://genoxidil.blog/sobre"
+        canonical="https://genoxidil.blog/sobre/"
         image="https://genoxidil.blog/genoxidil-logo.png"
         keywords={[
           "NBN Living Brasil",

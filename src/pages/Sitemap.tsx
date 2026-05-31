@@ -68,9 +68,9 @@ const Sitemap = () => {
 
   const allUrls = [
     "https://genoxidil.blog/",
-    "https://genoxidil.blog/sobre",
-    "https://genoxidil.blog/produtos",
-    "https://genoxidil.blog/blog",
+    "https://genoxidil.blog/sobre/",
+    "https://genoxidil.blog/produtos/",
+    "https://genoxidil.blog/blog/",
     "https://genoxidil.blog/faq",
     "https://genoxidil.blog/contato",
     "https://genoxidil.blog/afiliado",
