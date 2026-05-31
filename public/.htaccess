@@ -46,7 +46,7 @@ RewriteRule ^autism/?$ /genoxidil-autismo/ [L,R=301]
   # Exclude static files from any redirect
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteCond %{REQUEST_URI} !\.(?:ico|css|js|json|xml|txt|png|jpg|jpeg|gif|svg|webp|woff|woff2|ttf|eot|mp4|mp3|pdf)$ [NC]
+  RewriteCond %{REQUEST_URI} !\.(?:ico|css|js|json|webmanifest|xml|txt|png|jpg|jpeg|gif|svg|webp|woff|woff2|ttf|eot|mp4|mp3|pdf)$ [NC]
   
   # For routes that don't have static HTML, fall back to main index.html (SPA)
   # Only if a physical file/directory doesn't exist
@@ -54,9 +54,26 @@ RewriteRule ^autism/?$ /genoxidil-autismo/ [L,R=301]
 </IfModule>
 
 # Serve static files directly (ads.txt, robots.txt, sitemap.xml, etc.)
-<FilesMatch "\.(txt|xml|json|ico|css)$">
+<FilesMatch "\.(txt|xml|json|webmanifest|ico|css|js)$">
   RewriteEngine Off
 </FilesMatch>
+
+# Correct MIME types for PWA files
+<IfModule mod_mime.c>
+  AddType application/manifest+json .webmanifest
+  AddType application/javascript .js
+</IfModule>
+
+# Service worker must not be cached aggressively
+<IfModule mod_headers.c>
+  <FilesMatch "sw\.js$">
+    Header set Cache-Control "no-cache, no-store, must-revalidate"
+    Header set Service-Worker-Allowed "/"
+  </FilesMatch>
+  <FilesMatch "\.webmanifest$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+</IfModule>
 
 # Enable compression
 <IfModule mod_deflate.c>
