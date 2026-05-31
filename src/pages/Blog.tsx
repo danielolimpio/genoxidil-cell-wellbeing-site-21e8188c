@@ -116,7 +116,7 @@ const Blog = () => {
     '@type': 'Blog',
     name: 'Blog Genoxidil',
     description: 'Artigos sobre Genoxidil, Nrf2, saúde celular e bem-estar.',
-    url: 'https://genoxidil.blog/blog'
+    url: 'https://genoxidil.blog/blog/'
   };
 
   return (
