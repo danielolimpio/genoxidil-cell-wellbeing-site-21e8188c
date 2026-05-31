@@ -153,7 +153,7 @@ const Products = () => {
       <SEO
         title="Genoxidil - Suplemento de Regeneração Celular | NBN Living"
         description="Genoxidil: regeneração celular e ativação da proteína Nrf2. Veja benefícios, indicações de uso e composição."
-        canonical="https://genoxidil.blog/produtos"
+        canonical="https://genoxidil.blog/produtos/"
         keywords={hiddenKeywords}
       />
       <Header />

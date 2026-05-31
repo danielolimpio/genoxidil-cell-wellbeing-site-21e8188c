@@ -124,7 +124,7 @@ const Blog = () => {
       <SEO
         title="Blog Genoxidil | Saúde Celular, Nrf2 e Longevidade"
         description="Artigos sobre Genoxidil, proteína Nrf2, antioxidantes e saúde celular. Conteúdo atualizado, prático e confiável."
-        canonical="https://genoxidil.blog/blog"
+        canonical="https://genoxidil.blog/blog/"
         jsonLd={jsonLd}
       />
       <Header />
